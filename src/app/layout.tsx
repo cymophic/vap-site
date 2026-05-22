@@ -1,6 +1,9 @@
+import "./globals.css";
+
 import type { Metadata } from "next";
 import { Inter, Geist_Mono } from "next/font/google";
-import "./globals.css";
+
+import Header from "@/components/layout/header/Header";
 
 const inter = Inter({ variable: "--font-inter", subsets: ["latin"] });
 const geistMono = Geist_Mono({
@@ -23,10 +26,13 @@ export default function RootLayout({
       suppressHydrationWarning
     >
       <body
-        className="min-h-full flex flex-col bg-zinc-50"
+        className="bg-zinc-50 min-h-full flex flex-col font-sans"
         suppressHydrationWarning
       >
-        {children}
+        <Header />
+        <main className="mx-auto max-w-4xl w-full flex flex-col flex-1 gap-24 px-7">
+          {children}
+        </main>
       </body>
     </html>
   );

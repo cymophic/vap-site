@@ -6,13 +6,10 @@
 @theme {
   --font-sans: var(--font-inter);
   --font-mono: var(--font-geist-mono), var(--font-spline-sans-mono);
+  --color-brand-accent: #e8184d;
 }
 
 @layer base {
-  * {
-    scrollbar-gutter: stable;
-  }
-
   button {
     cursor: pointer;
   }
