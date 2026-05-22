@@ -46,7 +46,7 @@ function NavigationLinks({ className }: React.HTMLAttributes<HTMLSpanElement>) {
   const pathname = usePathname();
 
   return (
-    <nav className={cn("flex flex-row text-zinc-800", className)}>
+    <nav className={cn("flex flex-row text-orange-950", className)}>
       {navLinks.map((link) => (
         <Link key={link.href} href={link.href} className="group">
           <Underline isActive={pathname === link.href}>{link.label}</Underline>
