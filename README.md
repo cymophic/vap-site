@@ -1,4 +1,4 @@
-# Jenny Ann Valenciano
+# Virtual Assistant Provider PH
 
 Personal VA services site built with Next.js, deployed on AWS (S3 + CloudFront).
 
