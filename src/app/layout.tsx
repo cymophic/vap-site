@@ -3,6 +3,7 @@ import "./globals.css";
 import type { Metadata } from "next";
 import { DM_Sans, Geist_Mono } from "next/font/google";
 
+import ComingSoon from "@/app/coming-soon";
 import Header from "@/components/layout/header/Header";
 
 const dmSans = DM_Sans({ variable: "--font-dm-sans", subsets: ["latin"] });
@@ -29,10 +30,12 @@ export default function RootLayout({
         className="bg-zinc-50 min-h-full flex flex-col font-sans"
         suppressHydrationWarning
       >
-        <Header />
-        <main className="mx-auto max-w-4xl w-full flex flex-col flex-1 gap-24 px-7">
-          {children}
-        </main>
+        <ComingSoon>
+          <Header />
+          <main className="mx-auto max-w-4xl w-full flex flex-col flex-1 gap-24 px-7">
+            {children}
+          </main>
+        </ComingSoon>
       </body>
     </html>
   );
