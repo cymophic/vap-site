@@ -1,3 +1,5 @@
+import Link from "next/link";
+
 const SITE_MODE = process.env.NEXT_PUBLIC_SITE_MODE;
 
 export default function ComingSoon({
@@ -24,12 +26,12 @@ export default function ComingSoon({
 
       <p className="text-zinc-500 max-w-sm">
         In the meantime, feel free to reach out at{" "}
-        <a
+        <Link
           href="mailto:contact@jennyannvalenciano.com"
           className="text-brand-accent underline underline-offset-4 hover:opacity-70 transition-opacity"
         >
           contact@jennyannvalenciano.com
-        </a>
+        </Link>
       </p>
     </div>
   );
