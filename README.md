@@ -1,4 +1,4 @@
-# Virtual Assistant Provider PH
+# Virtual Assistant Provider
 
 Personal VA services site built with Next.js, deployed on AWS (S3 + CloudFront).
 
@@ -30,11 +30,11 @@ The site is live at [jennyannvalenciano.com](https://jennyannvalenciano.com)
 
 ### Infrastructure
 - **Frontend Hosting:** AWS S3 & AWS CloudFront
-- **DNS & Security:** *(TBD)*
-- **IaC:** Terraform *(planned)*
+- **DNS & Security:** Cloudflare (DNS) & AWS ACM (SSL)
+- **IaC:** Terraform
 
 ### CI/CD
-- **Pipeline:** GitHub Actions *(planned)*
+- **Pipeline:** GitHub Actions
 
 ---
 
@@ -42,6 +42,12 @@ The site is live at [jennyannvalenciano.com](https://jennyannvalenciano.com)
 
 ```
 jennyannvalenciano.com/
+├── .github/
+│   ├── workflows/
+│   │   ├── build.yml                     # Reusable build workflow
+│   │   ├── check.yml                     # PR validation workflow
+│   │   └── deploy.yml                    # Deployment workflow
+│   └── dependabot.yml                    # Automatic dependency updates
 ├── public/                               # Static assets
 ├── src/
 │   ├── app/
@@ -59,6 +65,16 @@ jennyannvalenciano.com/
 │       ├── utils/
 │       │   └── cn.ts                     # Class name utility
 │       └── site.ts                       # Site configurations
+├── terraform/
+│   ├── acm.tf                            # ACM SSL certificate
+│   ├── budgets.tf                        # AWS budget alerts
+│   ├── cloudfront.tf                     # CloudFront distribution, OAC, and functions
+│   ├── locals.tf                         # Centralized logic and data transformation layer
+│   ├── main.tf                           # Terraform and provider configuration
+│   ├── outputs.tf                        # Terraform output values
+│   ├── s3.tf                             # S3 bucket, policy, and access configuration
+│   ├── variables.tf                      # Input definitions
+│   └── terraform.tfvars.example          # Terraform variable template
 ├── .gitignore
 ├── eslint.config.mjs
 ├── next.config.ts
@@ -111,10 +127,94 @@ jennyannvalenciano.com/
 
 ## 🏗️ Infrastructure Setup
 
-> Terraform setup is planned but not yet configured.
+### Prerequisites
+
+- **Terraform** v1.14+
+- **AWS CLI** configured with valid credentials (`aws configure --profile jenny`)
+- A `jenny-deploy` IAM user in the Jenny AWS account with `AdministratorAccess`
+
+### Terraform Variables
+
+Variables are set in `terraform/terraform.tfvars`. An [example](terraform/terraform.tfvars.example) file is provided:
+
+```hcl
+# General
+domain_name  = "jennyannvalenciano.com"
+project_name = "vap-site"
+aws_region   = "ap-southeast-1"
+
+# Domain & CORS
+other_domains = []
+dev_origins   = ["http://localhost:3000", "http://localhost:3001"]
+
+# S3
+bucket_name = "jenny-vap-site"
+
+# Budget
+budget_limit_usd   = "100.0"
+budget_alert_email = ["name@email.com"]
+```
+
+### Provision AWS Resources
+
+```bash
+cd terraform
+terraform init
+terraform plan
+terraform apply
+```
+
+This provisions:
+- S3 bucket for static file hosting
+- CloudFront distribution with HTTPS
+- ACM SSL certificate for the custom domain
+- S3 bucket policy scoped to CloudFront only
+
+### DNS Setup
+
+After provisioning, these records are configured in Cloudflare:
+
+| Type | Name | Value |
+|---|---|---|
+| `CNAME` | `@` | CloudFront domain (from `terraform output cloudfront_domain`) |
+| `CNAME` | `www` | CloudFront domain (from `terraform output cloudfront_domain`) |
+| `CNAME` | ACM validation names | ACM validation values (from `terraform output acm_validation_records`) |
 
 ---
 
 ## 🔄 Deployment Process
 
-> CI/CD via GitHub Actions is planned but not yet configured.
+Deployments are fully automated via GitHub Actions.
+
+### Prerequisites
+
+The following are configured in **Settings → Secrets and Variables → Actions**:
+
+**Secrets**
+| Name | Description |
+|---|---|
+| `AWS_ACCESS_KEY_ID` | IAM user access key |
+| `AWS_SECRET_ACCESS_KEY` | IAM user secret key |
+| `CLOUDFRONT_DISTRIBUTION_ID` | CloudFront distribution ID |
+| `S3_BUCKET_NAME` | S3 bucket name |
+| `CLOUDFLARE_ZONE_ID` | Cloudflare Zone ID |
+| `CLOUDFLARE_API_TOKEN` | Cloudflare API Token |
+
+**Variables**
+| Name | Description |
+|---|---|
+| `NEXT_PUBLIC_SITE_MODE` | Controls which page is displayed (`live`, `coming_soon`, `maintenance`) |
+
+### Process Breakdown
+
+**On pull request to `main`** — `check.yml` runs:
+1. Lints the codebase
+2. Calls the reusable `build.yml` workflow to build the Next.js static export
+
+**On merge to `main`** — `deploy.yml` runs:
+1. Calls the reusable `build.yml` workflow
+2. Uploads the `/out` build artifact
+3. Downloads the `/out` artifact in the deploy job
+4. Syncs `/out` to S3
+5. Invalidates the CloudFront cache
+6. Purges the Cloudflare cache
