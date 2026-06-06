@@ -1,36 +1,120 @@
-This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-app`](https://nextjs.org/docs/app/api-reference/cli/create-next-app).
+# Jenny Ann Valenciano
 
-## Getting Started
+Personal VA services site built with Next.js, deployed on AWS (S3 + CloudFront).
 
-First, run the development server:
+---
 
-```bash
-npm run dev
-# or
-yarn dev
-# or
-pnpm dev
-# or
-bun dev
+## 📚 Table of Contents
+
+1. 🌐 [Live Deployment](#-live-deployment)
+2. ⚙️ [Tech Stack](#️-tech-stack)
+3. 📁 [Project Structure](#-project-structure)
+4. 🚀 [Local Development](#-local-development)
+5. 🏗️ [Infrastructure Setup](#️-infrastructure-setup)
+6. 🔄 [Deployment Process](#-deployment-process)
+
+---
+
+## 🌐 Live Deployment
+
+The site is live at [jennyannvalenciano.com](https://jennyannvalenciano.com)
+
+---
+
+## ⚙️ Tech Stack
+
+### Application
+- **Framework:** Next.js 16
+- **Language:** TypeScript
+- **Styling:** Tailwind CSS v4
+
+### Infrastructure
+- **Frontend Hosting:** AWS S3 & AWS CloudFront
+- **DNS & Security:** *(TBD)*
+- **IaC:** Terraform *(planned)*
+
+### CI/CD
+- **Pipeline:** GitHub Actions *(planned)*
+
+---
+
+## 📁 Project Structure
+
+```
+jennyannvalenciano.com/
+├── public/                               # Static assets
+├── src/
+│   ├── app/
+│   │   ├── globals.css                   # Global styles and Tailwind imports
+│   │   ├── layout.tsx                    # Root layout component
+│   │   ├── not-found.tsx                 # 404 page
+│   │   └── page.tsx                      # Homepage
+│   ├── components/
+│   │   ├── layout/
+│   │   │   └── header/
+│   │   │       └── Header.tsx            # Site header and navigation
+│   │   └── ui/
+│   │       └── Underline.tsx             # Animated underline component
+│   └── lib/
+│       ├── utils/
+│       │   └── cn.ts                     # Class name utility
+│       └── site.ts                       # Site configurations
+├── .gitignore
+├── eslint.config.mjs
+├── next.config.ts
+├── package.json
+├── postcss.config.mjs
+└── tsconfig.json
 ```
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+---
 
-You can start editing the page by modifying `app/page.tsx`. The page auto-updates as you edit the file.
+## 🚀 Local Development
 
-This project uses [`next/font`](https://nextjs.org/docs/app/building-your-application/optimizing/fonts) to automatically optimize and load [Geist](https://vercel.com/font), a new font family for Vercel.
+### Prerequisites
 
-## Learn More
+- **Node.js** v22+
+- **npm** v10+
 
-To learn more about Next.js, take a look at the following resources:
+### Setup
 
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
+1. **Clone the repository:**
 
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js) - your feedback and contributions are welcome!
+    ```bash
+    git clone https://github.com/<your-username>/vap-site.git
+    cd vap-site
+    ```
 
-## Deploy on Vercel
+2. **Install dependencies:**
 
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
+    ```bash
+    npm install
+    ```
 
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/app/building-your-application/deploying) for more details.
+3. **Start the development server:**
+
+    ```bash
+    npm run dev
+    ```
+
+    Open [http://localhost:3000](http://localhost:3000) in your browser.
+
+### Available Scripts
+
+| Command | Description |
+|---|---|
+| `npm run dev` | Start local development server |
+| `npm run build` | Build static export |
+| `npm run lint` | Run ESLint |
+
+---
+
+## 🏗️ Infrastructure Setup
+
+> Terraform setup is planned but not yet configured.
+
+---
+
+## 🔄 Deployment Process
+
+> CI/CD via GitHub Actions is planned but not yet configured.
