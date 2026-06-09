@@ -15,22 +15,23 @@ export default function Hero() {
   return (
     <section className="w-full flex flex-col md:flex-row md:items-center md:gap-12 py-16">
       {/* Left */}
-      <div className="flex flex-col gap-6 flex-1">
+      <div className="flex flex-col mx-auto gap-6 flex-1">
         {/* Eyebrow */}
-        <p className="text-xs font-semibold uppercase tracking-widest text-brand-accent">
+        <p className="text-xs font-semibold uppercase text-center md:text-left tracking-widest text-brand-accent">
           Virtual Assistant Services
         </p>
 
         {/* Heading */}
-        <h1 className="text-4xl md:text-6xl font-bold leading-tight tracking-tight text-zinc-900">
-          You focus on Growth. We Handle{" "}
+        <h1 className="-mt-4 text-4xl md:text-6xl font-bold text-center md:text-left leading-tight tracking-tight text-zinc-900">
+          You focus on Growth. <br /> We Handle{" "}
           <span className="text-brand-accent">the Rest.</span>
         </h1>
 
         {/* Subheading */}
-        <p className="text-zinc-500 text-lg md:text-xl leading-relaxed">
-          13+ years of virtual support designed with quality, consistency, and
-          results so you can focus on what matters most.
+        <p className="text-zinc-500 text-center md:text-left max-w-md text-lg md:text-xl leading-relaxed">
+          {stats.yearsOfExperience}+ years of trusted virtual support designed
+          with quality, consistency, and results so you can focus on what
+          matters most.
         </p>
 
         {/* Checklist */}
@@ -46,6 +47,7 @@ export default function Hero() {
           ))}
         </ul>
 
+        {/* Buttons */}
         <div className="flex flex-col md:flex-row md:gap-4 items-center">
           {/* Book a Meeting Button */}
           <div className="mt-2 w-full md:w-fit flex justify-center sm:justify-left">
@@ -74,7 +76,7 @@ export default function Hero() {
         </div>
 
         {/* Stats */}
-        <div className="mt-2 sm:mt-4 flex justify-center md:justify-start items-center gap-6 sm:gap-8">
+        <div className="mt-2 sm:mt-4 flex justify-center md:justify-start items-center gap-5 sm:gap-8">
           {/* Rating */}
           <div className="flex flex-col">
             <span className="flex items-center gap-1 text-xl font-bold text-zinc-900">
@@ -104,7 +106,7 @@ export default function Hero() {
         {/* Mobile: Image + Checklist */}
         <div className="mt-8 flex flex-row mx-auto items-center gap-6 md:hidden">
           {/* Image */}
-          <div className="relative w-32 shrink-0 aspect-square rounded-2xl overflow-hidden bg-zinc-100">
+          <div className="relative shadow-2xl w-32 shrink-0 aspect-square rounded-2xl overflow-hidden bg-zinc-100">
             <Image
               src="/assets/hero/image.jpg"
               alt="Virtual assistant at work"
@@ -134,7 +136,7 @@ export default function Hero() {
 
       {/* Right: Desktop Only */}
       <div className="hidden md:flex flex-1 justify-center">
-        <div className="relative w-full max-w-sm aspect-3/4 rounded-3xl overflow-hidden bg-zinc-100">
+        <div className="relative shadow-2xl w-full max-w-sm aspect-3/4 rounded-3xl overflow-hidden bg-zinc-100">
           <Image
             src="/assets/hero/image.jpg"
             alt="Virtual assistant at work"
