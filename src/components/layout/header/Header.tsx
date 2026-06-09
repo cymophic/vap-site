@@ -12,9 +12,11 @@ import { cn } from "@/lib/utils/cn";
 
 export default function Header() {
   return (
-    <header className="w-full fixed top-0 left-0 right-0 py-2">
+    <header className="w-full fixed top-0 left-0 right-0 py-2 px-4">
       <div className="mx-auto max-w-7xl w-full flex justify-between items-center">
-        <Logo />
+        <Link href="/">
+          <Logo />
+        </Link>
         <NavigationLinks className="gap-10 px-3" />
         <ActionButton className="px-8" />
       </div>
@@ -29,7 +31,7 @@ type Logo = {
   className?: string;
 };
 function Logo({ width = 150, height = 100, className }: Logo) {
-  const logoUrl: string = "/vap-logo.png";
+  const logoUrl: string = "/vap-logo-full.png";
 
   return (
     <Image
@@ -38,7 +40,7 @@ function Logo({ width = 150, height = 100, className }: Logo) {
       width={width}
       height={height}
       priority
-      className={cn("rounded-full object-cover h-15 mt-0.5 w-auto", className)}
+      className={cn("object-cover h-15 -ml-2 w-auto", className)}
     />
   );
 }
