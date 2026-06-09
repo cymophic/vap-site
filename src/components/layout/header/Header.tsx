@@ -5,6 +5,7 @@ import Link from "next/link";
 import { usePathname } from "next/navigation";
 
 import Underline from "@/components/ui/Underline";
+import Button from "@/components/ui/Button";
 
 import { navLinks } from "@/lib/site";
 import { cn } from "@/lib/utils/cn";
@@ -15,6 +16,7 @@ export default function Header() {
       <div className="mx-auto max-w-7xl w-full flex justify-between items-center">
         <Logo />
         <NavigationLinks className="gap-10 px-3" />
+        <ActionButton className="px-8" />
       </div>
     </header>
   );
@@ -42,7 +44,7 @@ function Logo({ width = 150, height = 100, className }: Logo) {
 }
 
 // Navigation links
-function NavigationLinks({ className }: React.HTMLAttributes<HTMLSpanElement>) {
+function NavigationLinks({ className }: { className?: string }) {
   const pathname = usePathname();
 
   return (
@@ -58,5 +60,18 @@ function NavigationLinks({ className }: React.HTMLAttributes<HTMLSpanElement>) {
         </Link>
       ))}
     </nav>
+  );
+}
+
+// Call to Action Button
+type ActionButton = {
+  text?: string;
+  className?: string;
+};
+function ActionButton({ text = "Let's Talk", className }: ActionButton) {
+  return (
+    <Button variant="primary" size="lg" className={className}>
+      <span className="whitespace-nowrap">{text}</span>
+    </Button>
   );
 }
