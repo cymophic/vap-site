@@ -22,13 +22,13 @@ export default function Hero() {
         </p>
 
         {/* Heading */}
-        <h1 className="text-4xl md:text-5xl font-bold leading-tight tracking-tight text-zinc-900">
-          Focus on Growth. We Handle{" "}
+        <h1 className="text-4xl md:text-6xl font-bold leading-tight tracking-tight text-zinc-900">
+          You focus on Growth. We Handle{" "}
           <span className="text-brand-accent">the Rest.</span>
         </h1>
 
         {/* Subheading */}
-        <p className="text-zinc-500 text-lg leading-relaxed">
+        <p className="text-zinc-500 text-lg md:text-xl leading-relaxed">
           13+ years of virtual support designed with quality, consistency, and
           results so you can focus on what matters most.
         </p>
@@ -36,12 +36,12 @@ export default function Hero() {
         {/* Checklist */}
         <ul className="hidden md:flex flex-col gap-2">
           {features.map((feature) => (
-            <li key={feature} className="flex items-start gap-2 text-zinc-700">
+            <li key={feature} className="flex items-center gap-2 text-zinc-700">
               <IconCheck
-                size={16}
+                size={18}
                 className="text-brand-accent shrink-0 mt-0.5"
               />
-              <span className="text-base">{feature}</span>
+              <span className="text-base font-medium">{feature}</span>
             </li>
           ))}
         </ul>
