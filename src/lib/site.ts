@@ -15,5 +15,5 @@ export const navLinks: { href: string; label: string }[] = [
 export const stats = {
   rating: 5.0,
   hours: 26430,
-  yearsOfExperience: 14,
+  yearsOfExperience: 18,
 };
