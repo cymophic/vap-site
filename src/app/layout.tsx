@@ -32,9 +32,7 @@ export default function RootLayout({
       >
         <ComingSoon>
           <Header />
-          <main className="mx-auto max-w-4xl w-full flex flex-col flex-1 gap-24 px-7">
-            {children}
-          </main>
+          <main className="mx-auto max-w-7xl w-full">{children}</main>
         </ComingSoon>
       </body>
     </html>

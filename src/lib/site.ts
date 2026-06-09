@@ -10,3 +10,10 @@ export const navLinks: { href: string; label: string }[] = [
   { label: "Contact", href: "/contact/" },
   { label: "Services", href: "/services/" },
 ];
+
+// Client statistics
+export const stats = {
+  rating: 5.0,
+  hours: 26430,
+  yearsOfExperience: 14,
+};

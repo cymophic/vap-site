@@ -7,6 +7,7 @@
   --font-sans: var(--font-dm-sans);
   --font-mono: var(--font-geist-mono), var(--font-spline-sans-mono);
   --color-brand-accent: #e8184d;
+  --header-height: 4rem;
 }
 
 @layer base {

@@ -12,7 +12,7 @@ import { cn } from "@/lib/utils/cn";
 
 export default function Header() {
   return (
-    <header className="w-full fixed top-0 left-0 right-0 py-2 px-4">
+    <header className="w-full fixed top-0 left-0 right-0 py-2 px-4 h-(--header-height)">
       <div className="mx-auto max-w-7xl w-full flex justify-between items-center">
         <Link href="/">
           <Logo />
