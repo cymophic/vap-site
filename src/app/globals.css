@@ -10,12 +10,6 @@
   --header-height: 4rem;
 }
 
-@layer base {
-  button {
-    cursor: pointer;
-  }
-}
-
 @layer utilities {
   .font-console {
     font-family: var(--font-spline-sans-mono), Consolas, monospace;
@@ -23,5 +17,20 @@
 
   .scrollbar-gutter-auto {
     scrollbar-gutter: auto;
+  }
+}
+
+@layer base {
+  button {
+    cursor: pointer;
+  }
+
+  @keyframes marquee {
+    from {
+      transform: translateX(0);
+    }
+    to {
+      transform: translateX(-50%);
+    }
   }
 }
