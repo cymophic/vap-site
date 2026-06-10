@@ -78,7 +78,7 @@ export default function Services() {
     <section className="w-full flex flex-col gap-12 py-16">
       {/* Header */}
       <div className="flex flex-col gap-4 text-center">
-        <p className="text-xs font-semibold uppercase tracking-widest text-brand-accent">
+        <p className="text-xs font-semibold uppercase tracking-widest text-zinc-500">
           What We Offer
         </p>
         <h2 className="-mt-2 text-3xl md:text-4xl font-bold text-zinc-900 tracking-tight">
