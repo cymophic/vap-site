@@ -16,7 +16,7 @@ export default function Header() {
   const [isOpen, setIsOpen] = useState(false);
 
   return (
-    <header className="w-full fixed top-0 left-0 right-0 py-2 px-4 h-(--header-height) z-50">
+    <header className="w-full fixed top-0 left-0 right-0 py-2 px-(--header-height) border-b border-zinc-200 bg-white z-50 flex items-center">
       <div className="mx-auto max-w-7xl w-full flex justify-between items-center">
         <Link href="/">
           <Logo />
@@ -33,7 +33,7 @@ export default function Header() {
           {isOpen ? <IconX size={22} /> : <IconMenu2 size={22} />}
         </button>
       </div>
-      <MobileNav isOpen={isOpen} onClose={() => setIsOpen(false)} />
+      <MobileMenu isOpen={isOpen} onClose={() => setIsOpen(false)} />
     </header>
   );
 }
@@ -54,7 +54,7 @@ function Logo({ width = 150, height = 100, className }: Logo) {
       width={width}
       height={height}
       priority
-      className={cn("object-cover h-15 -ml-2 w-auto", className)}
+      className={cn("object-cover h-15 pt-0.5 -ml-2 w-auto", className)}
     />
   );
 }
@@ -93,11 +93,11 @@ function ActionButton({ text = "Let's Talk", className }: ActionButton) {
 }
 
 // Mobile navigation
-type MobileNavProps = {
+type MobileMenuProps = {
   isOpen: boolean;
   onClose: () => void;
 };
-function MobileNav({ isOpen, onClose }: MobileNavProps) {
+function MobileMenu({ isOpen, onClose }: MobileMenuProps) {
   const pathname = usePathname();
 
   if (!isOpen) return null;
