@@ -8,7 +8,7 @@ export default function Clients() {
   return (
     <section className="w-full flex flex-col gap-12 py-8">
       <p className="text-xs font-semibold uppercase text-center tracking-widest text-brand-accent">
-        Trusted by
+        Trusted by Clients Worldwide
       </p>
       <div className="overflow-hidden">
         <div className="flex w-max animate-[marquee_30s_linear_infinite] hover:[animation-play-state:paused]">
