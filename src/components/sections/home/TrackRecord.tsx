@@ -8,7 +8,7 @@ export default function TrackRecord() {
       {/* Left */}
       <div className="flex flex-col gap-6 flex-1">
         <h2 className="-mt-2 text-3xl md:text-4xl font-bold text-zinc-800 tracking-tight leading-tight">
-          Delivering results over a decade. <br /> Trusted worldwide.
+          Delivering results for decades. <br /> Built from clients like you.
         </h2>
         <p className="text-zinc-500 text-lg leading-relaxed max-w-lg">
           Real experience. Real results. Continuously trusted by business owners
