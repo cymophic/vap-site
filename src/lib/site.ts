@@ -13,8 +13,10 @@ export const navLinks: { href: string; label: string }[] = [
 
 // Client statistics
 export const stats = {
+  yearStarted: 2008,
   rating: 5.0,
   hours: 51000,
   yearsOfExperience: 18,
   completedProjects: 2500,
+  totalClients: 150,
 };
