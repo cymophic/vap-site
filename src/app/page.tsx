@@ -6,7 +6,7 @@ import Process from "@/components/sections/home/Process";
 
 export default function Home() {
   return (
-    <div className="mx-auto max-w-7xl w-full flex flex-1 flex-col font-sans pt-28 px-4 xl:px-0 gap-10">
+    <div className="mx-auto max-w-7xl w-full flex flex-1 flex-col font-sans pt-28 px-4 xl:px-8 gap-10">
       <Hero />
       <Clients />
       <TrackRecord />
