@@ -7,7 +7,7 @@ export default function ActionBanner() {
       {/* Text */}
       <div className="flex text-center md:text-left">
         <h2 className="text-3xl md:text-4xl font-bold text-brand-accent tracking-tight">
-          Delegate your daily tasks
+          Start delegating your daily tasks
         </h2>
       </div>
 
@@ -28,9 +28,9 @@ export default function ActionBanner() {
           className="w-full md:w-auto max-w-md flex justify-center"
         >
           <Button
-            variant="outline"
+            variant="secondary"
             size="lg"
-            className="px-8 w-full md:w-auto max-w-md whitespace-nowrap bg-white border-zinc-300!"
+            className="px-8 w-full md:w-auto max-w-md whitespace-nowrap bg-white/90! border-none! hover:bg-white!"
           >
             Learn More
           </Button>
