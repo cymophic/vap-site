@@ -21,7 +21,7 @@ export default function NotFound() {
         className="mt-2 w-full md:w-fit flex justify-center sm:justify-left"
       >
         <Button
-          variant="primary"
+          variant="secondary"
           size="lg"
           className="w-full md:w-auto max-w-md px-8"
         >
