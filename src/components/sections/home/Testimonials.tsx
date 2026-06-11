@@ -147,8 +147,8 @@ export default function Testimonials() {
             key={i}
             onClick={() => setCurrentPage(i)}
             aria-label={`Go to page ${i + 1}`}
-            className={`h-2 rounded-full transition-all duration-300 ${
-              i === currentPage ? "w-4 bg-brand-accent" : "w-2 bg-zinc-300"
+            className={`h-2.5 rounded-full transition-all duration-300 ${
+              i === currentPage ? "w-5 bg-brand-accent" : "w-2.5 bg-zinc-300"
             }`}
           />
         ))}
