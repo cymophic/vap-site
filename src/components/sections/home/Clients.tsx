@@ -6,8 +6,8 @@ export default function Clients() {
   const logos = getLogos();
 
   return (
-    <section className="w-full flex flex-col gap-12 py-8">
-      <p className="text-xs font-semibold uppercase text-center tracking-widest text-brand-accent">
+    <section className="w-full flex flex-col gap-12">
+      <p className="text-xs font-semibold uppercase text-center tracking-widest text-zinc-500">
         Trusted by Clients Worldwide
       </p>
       <div className="overflow-hidden mask-[linear-gradient(to_right,transparent,black_15%,black_85%,transparent)]">

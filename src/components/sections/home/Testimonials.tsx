@@ -102,7 +102,7 @@ export default function Testimonials() {
   );
 
   return (
-    <section className="w-full flex flex-col gap-12 py-12">
+    <section className="w-full flex flex-col gap-12">
       {/* Header */}
       <div className="flex flex-col gap-4 text-center">
         <p className="text-xs font-semibold uppercase tracking-widest text-zinc-500">

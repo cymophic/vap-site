@@ -7,7 +7,7 @@ import Testimonials from "@/components/sections/home/Testimonials";
 
 export default function Home() {
   return (
-    <div className="mx-auto max-w-7xl w-full flex flex-1 flex-col font-sans pt-28 px-4 xl:px-8 gap-10">
+    <div className="mx-auto max-w-7xl w-full flex flex-1 flex-col font-sans pt-38 px-4 xl:px-8 gap-34">
       <Hero />
       <Clients />
       <TrackRecord />
