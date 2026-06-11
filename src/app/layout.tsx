@@ -5,6 +5,7 @@ import { DM_Sans, Geist_Mono } from "next/font/google";
 
 import ComingSoon from "@/app/coming-soon";
 import Header from "@/components/layout/header/Header";
+import Footer from "@/components/layout/footer/Footer";
 
 const dmSans = DM_Sans({ variable: "--font-dm-sans", subsets: ["latin"] });
 const geistMono = Geist_Mono({
@@ -33,6 +34,7 @@ export default function RootLayout({
         <ComingSoon>
           <Header />
           <main className="mx-auto max-w-7xl w-full">{children}</main>
+          <Footer />
         </ComingSoon>
       </body>
     </html>
