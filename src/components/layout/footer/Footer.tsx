@@ -10,8 +10,8 @@ export default function Footer() {
       <div className="mx-auto max-w-7xl w-full px-4 xl:px-8 py-12 flex flex-col gap-8">
         {/* Top: Logo + Nav */}
         <div className="flex flex-col md:flex-row md:items-center justify-between gap-8">
-          {/* Logo + Tagline */}
-          <div className="flex flex-row items-center gap-4">
+          {/* Logo */}
+          <div className="flex flex-col md:flex-row items-center justify-center md:justify-start gap-4">
             <Image
               src="/vap-logo.png"
               alt="VAP Logo"
@@ -19,7 +19,7 @@ export default function Footer() {
               height={48}
               className="h-14 w-auto brightness-0 invert"
             />
-            <div className="flex flex-col">
+            <div className="flex flex-col text-center md:text-start">
               <span className="text-lg font-bold text-white">
                 Virtual Assistant Provider
               </span>
