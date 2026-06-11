@@ -16,7 +16,7 @@ export default function Header() {
   const [isOpen, setIsOpen] = useState(false);
 
   return (
-    <header className="w-full fixed top-0 left-0 right-0 py-2 px-4 border-b border-zinc-200 bg-white z-50 flex items-center">
+    <header className="w-full fixed top-0 left-0 right-0 py-2 px-4 border-b border-zinc-200 bg-white z-50 flex items-center h-(--header-height)">
       <div className="mx-auto max-w-7xl w-full flex justify-between items-center">
         <Link href="/">
           <Logo />
