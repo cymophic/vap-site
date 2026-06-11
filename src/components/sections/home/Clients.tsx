@@ -11,7 +11,7 @@ export default function Clients() {
         Trusted by Clients Worldwide
       </p>
       <div className="overflow-hidden mask-[linear-gradient(to_right,transparent,black_15%,black_85%,transparent)]">
-        <div className="flex w-max animate-[marquee_30s_linear_infinite] hover:[animation-play-state:paused]">
+        <div className="flex w-max animate-[marquee_20s_linear_infinite] hover:[animation-play-state:paused]">
           {[...logos, ...logos].map((logo, i) => (
             <div
               key={`${logo.src}-${i}`}
