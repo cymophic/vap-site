@@ -12,7 +12,7 @@ export default function ComingSoon({
   }
 
   return (
-    <div className="flex flex-col items-center justify-center flex-1 px-7 text-center gap-8">
+    <div className="flex flex-col items-center justify-center flex-1 px-7 text-center gap-8 min-h-[calc(100vh-var(--header-height))]">
       <div className="flex flex-col gap-4">
         <p className="text-4xl md:text-5xl font-semibold tracking-tight text-brand-accent">
           Coming Soon
