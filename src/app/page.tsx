@@ -2,6 +2,7 @@ import Hero from "@/components/sections/home/Hero";
 import Clients from "@/components/sections/home/Clients";
 import Services from "@/components/sections/home/Services";
 import TrackRecord from "@/components/sections/home/TrackRecord";
+import Process from "@/components/sections/home/Process";
 
 export default function Home() {
   return (
@@ -10,6 +11,7 @@ export default function Home() {
       <Clients />
       <TrackRecord />
       <Services />
+      <Process />
     </div>
   );
 }
