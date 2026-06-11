@@ -10,7 +10,7 @@ export default function Clients() {
       <p className="text-xs font-semibold uppercase text-center tracking-widest text-brand-accent">
         Trusted by Clients Worldwide
       </p>
-      <div className="overflow-hidden">
+      <div className="overflow-hidden mask-[linear-gradient(to_right,transparent,black_15%,black_85%,transparent)]">
         <div className="flex w-max animate-[marquee_30s_linear_infinite] hover:[animation-play-state:paused]">
           {[...logos, ...logos].map((logo, i) => (
             <div
