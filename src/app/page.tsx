@@ -3,6 +3,7 @@ import Clients from "@/components/sections/home/Clients";
 import Services from "@/components/sections/home/Services";
 import TrackRecord from "@/components/sections/home/TrackRecord";
 import Process from "@/components/sections/home/Process";
+import Testimonials from "@/components/sections/home/Testimonials";
 
 export default function Home() {
   return (
@@ -12,6 +13,7 @@ export default function Home() {
       <TrackRecord />
       <Services />
       <Process />
+      <Testimonials />
     </div>
   );
 }
