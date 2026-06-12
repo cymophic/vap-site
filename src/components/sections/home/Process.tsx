@@ -39,8 +39,8 @@ export default function Process() {
           Getting Started Is Simple
         </h2>
         <p className="text-zinc-500 text-lg max-w-xl mx-auto leading-relaxed">
-          Wwe keep the process straightforward so you can focus on your
-          business, from your first message to your first completed task.
+          We keep the process straightforward so you can focus on your business,
+          from your first message to your first completed task.
         </p>
       </div>
 
