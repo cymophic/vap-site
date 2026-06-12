@@ -30,7 +30,7 @@ export default function ActionBanner() {
           <Button
             variant="secondary"
             size="lg"
-            className="px-8 w-full md:w-auto max-w-md whitespace-nowrap bg-white/90! border-none! hover:bg-white!"
+            className="px-8 w-full md:w-auto max-w-md whitespace-nowrap bg-white/90! border border-transparent hover:border-zinc-300"
           >
             Learn More
           </Button>
