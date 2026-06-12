@@ -54,7 +54,7 @@ function Logo({ width = 150, height = 100, className }: Logo) {
       width={width}
       height={height}
       priority
-      className={cn("object-cover h-15 pt-0.5 -ml-2 w-auto", className)}
+      className={cn("object-contain h-15 w-50 pt-0.5 -ml-2", className)}
     />
   );
 }
