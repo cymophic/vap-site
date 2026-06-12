@@ -4,6 +4,7 @@ import Services from "@/components/sections/home/Services";
 import TrackRecord from "@/components/sections/home/TrackRecord";
 import Process from "@/components/sections/home/Process";
 import Testimonials from "@/components/sections/home/Testimonials";
+import FAQ from "@/components/sections/home/FAQ";
 import ActionBanner from "@/components/sections/home/ActionBanner";
 
 export default function Home() {
@@ -15,6 +16,7 @@ export default function Home() {
       <Services />
       <Process />
       <Testimonials />
+      <FAQ />
       <ActionBanner />
     </div>
   );
