@@ -81,7 +81,10 @@ export default function FAQ() {
               {/* Question */}
               <span
                 className={cn(
-                  "text-base font-semibold text-zinc-800 transition-colors group-hover:text-brand-accent",
+                  "text-base font-semibold transition-colors group-hover:text-brand-accent",
+                  openIndex === i
+                    ? "text-brand-accent sm:text-zinc-800"
+                    : "text-zinc-800",
                 )}
               >
                 {faq.question}
@@ -89,9 +92,15 @@ export default function FAQ() {
 
               {/* Toggle Icon */}
               {openIndex === i ? (
-                <IconMinus size={18} className="text-brand-accent shrink-0" />
+                <IconMinus
+                  size={18}
+                  className="text-brand-accent md:text-zinc-800 shrink-0 group-hover:text-brand-accent"
+                />
               ) : (
-                <IconPlus size={18} className="text-zinc-400 shrink-0" />
+                <IconPlus
+                  size={18}
+                  className="text-zinc-400 shrink-0 group-hover:text-brand-accent"
+                />
               )}
             </button>
 
