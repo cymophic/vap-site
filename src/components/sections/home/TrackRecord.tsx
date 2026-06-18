@@ -15,11 +15,7 @@ export default function TrackRecord() {
           worldwide to handle the work that keeps operations running smoothly.
         </p>
         <Link href="/contact/" className="w-full md:w-fit">
-          <Button
-            variant="primary"
-            size="lg"
-            className="w-full md:w-auto px-8 max-w-md"
-          >
+          <Button variant="primary" size="lg" className="w-1/2 md:w-auto px-8">
             Get in Touch
           </Button>
         </Link>
