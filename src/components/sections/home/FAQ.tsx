@@ -59,7 +59,7 @@ export default function FAQ() {
   }
 
   return (
-    <section className="w-full max-w-3xl flex flex-col gap-12 mx-auto">
+    <section className="w-full mx-auto max-w-3xl flex flex-col gap-12">
       {/* Header */}
       <div className="flex flex-col gap-4 text-center">
         <p className="text-xs font-semibold uppercase tracking-widest text-zinc-500">

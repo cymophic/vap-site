@@ -13,7 +13,7 @@ const features: string[] = [
 
 export default function Hero() {
   return (
-    <section className="w-full flex flex-col md:flex-row md:items-center md:gap-12">
+    <section className="w-full mx-auto max-w-7xl flex flex-col md:flex-row md:items-center md:gap-12">
       {/* Left */}
       <div className="flex flex-col mx-auto gap-6 flex-1">
         {/* Eyebrow */}

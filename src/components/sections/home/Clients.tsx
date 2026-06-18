@@ -6,7 +6,7 @@ export default function Clients() {
   const logos = getLogos();
 
   return (
-    <section className="w-full flex flex-col gap-12">
+    <section className="w-full mx-auto max-w-7xl flex flex-col gap-12">
       <p className="text-xs font-semibold uppercase text-center tracking-widest text-zinc-500">
         Trusted by Businesses Worldwide
       </p>

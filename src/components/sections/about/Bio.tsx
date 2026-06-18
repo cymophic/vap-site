@@ -3,7 +3,7 @@ import { stats } from "@/lib/site";
 
 export default function Bio() {
   return (
-    <section className="w-full flex flex-col md:flex-row md:items-center gap-12">
+    <section className="w-full mx-auto max-w-7xl flex flex-col md:flex-row md:items-center gap-12">
       {/* Left: Image */}
       <div className="flex-1 flex justify-center">
         <div className="relative shadow-2xl w-full max-w-sm aspect-3/4 rounded-3xl overflow-hidden bg-zinc-100">

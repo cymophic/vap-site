@@ -33,7 +33,7 @@ export default function RootLayout({
       >
         <ComingSoon>
           <Header />
-          <main className="mx-auto max-w-7xl w-full">{children}</main>
+          <main className="mx-auto w-full">{children}</main>
           <Footer />
         </ComingSoon>
       </body>
