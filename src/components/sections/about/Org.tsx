@@ -2,7 +2,7 @@ import Image from "next/image";
 
 export default function Org() {
   return (
-    <section className="w-full mx-auto max-w-5xl flex flex-col md:flex-row md:items-center gap-18">
+    <section className="flex flex-col md:flex-row md:items-center gap-18">
       {/* Left: Text */}
       <div className="flex flex-col gap-6 flex-1">
         <p className="text-xs font-semibold uppercase tracking-widest text-zinc-500">

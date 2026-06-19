@@ -4,7 +4,7 @@ import { stats } from "@/lib/site";
 
 export default function TrackRecord() {
   return (
-    <section className="w-full mx-auto max-w-7xl flex flex-col md:flex-row md:items-center gap-12">
+    <section className="flex flex-col md:flex-row md:items-center gap-12">
       {/* Left */}
       <div className="flex flex-col gap-6 flex-1">
         <h2 className="-mt-2 text-3xl md:text-4xl font-bold text-zinc-800 tracking-tight leading-tight">

@@ -10,7 +10,7 @@ export default function Hero() {
         background: `radial-gradient(ellipse at center, rgba(232, 24, 77, 0.04) 0%, transparent 70%)`,
       }}
     >
-      <div className="mx-auto max-w-7xl px-4 xl:px-8 flex flex-col items-center text-center gap-6">
+      <div className="px-4 xl:px-8 flex flex-col items-center text-center gap-6">
         <p className="text-xs font-semibold uppercase tracking-widest text-zinc-500">
           About Us
         </p>

@@ -3,7 +3,7 @@ import Button from "@/components/ui/Button";
 
 export default function ActionBanner() {
   return (
-    <section className="w-full mx-auto max-w-7xl bg-brand-accent/8 rounded-2xl px-8 py-14 md:py-14 md:px-12 flex flex-col md:flex-row items-center justify-between gap-8 md:gap-12">
+    <section className="bg-brand-accent/8 rounded-2xl px-8 py-14 md:py-14 md:px-12 flex flex-col md:flex-row items-center justify-between gap-8 md:gap-12">
       {/* Text */}
       <div className="flex text-center md:text-left">
         <h2 className="text-3xl md:text-4xl font-bold text-brand-accent tracking-tight">
