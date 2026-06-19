@@ -1,6 +1,7 @@
 import Hero from "@/components/sections/about/Hero";
 import Founder from "@/components/sections/about/Founder";
 import Org from "@/components/sections/about/Org";
+import Stats from "@/components/sections/about/Stats";
 import ActionBanner from "@/components/sections/home/ActionBanner";
 
 export default function About() {
@@ -14,6 +15,9 @@ export default function About() {
       </div>
       <div className="w-full max-w-5xl mx-auto">
         <Org />
+      </div>
+      <div className="-mx-8 xl:-mx-12">
+        <Stats />
       </div>
       <div className="w-full max-w-7xl mx-auto">
         <ActionBanner />
