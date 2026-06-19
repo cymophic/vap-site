@@ -1,12 +1,12 @@
 import Image from "next/image";
 import { stats } from "@/lib/site";
 
-export default function Bio() {
+export default function Founder() {
   return (
-    <section className="w-full mx-auto max-w-7xl flex flex-col md:flex-row md:items-center gap-12">
+    <section className="w-full mx-auto max-w-5xl flex flex-col md:flex-row md:items-center gap-18">
       {/* Left: Image */}
-      <div className="flex-1 flex justify-center">
-        <div className="relative shadow-2xl w-full max-w-sm aspect-3/4 rounded-3xl overflow-hidden bg-zinc-100">
+      <div className="shrink-0">
+        <div className="relative shadow-2xl w-72 md:w-96 aspect-3/4 rounded-3xl overflow-hidden bg-zinc-100 mx-auto">
           <Image
             src="/assets/about/portrait.jpg"
             alt="Jenny Ann Valenciano"
@@ -38,18 +38,6 @@ export default function Bio() {
             USA, Canada, UK, and New Zealand. Her clients rely on her to help
             them achieve their goals and save their valuable time to focus on
             more important activities.
-          </p>
-          <p>
-            Virtual Assistant Provider&#39;s primary objective is to help their
-            clients reach their personal and professional milestones with ease
-            while providing efficient and effective service delivery that
-            ensures their satisfaction.
-          </p>
-          <p>
-            If you&#39;re searching for a reliable virtual assistant, look no
-            further than Jenny Ann and her team at Virtual Assistant Provider.
-            They are committed to helping you achieve your goals and freeing up
-            your valuable time so that you can focus on what&#39;s essential.
           </p>
         </div>
       </div>

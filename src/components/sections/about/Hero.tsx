@@ -7,7 +7,7 @@ export default function Hero() {
     <section
       className="w-full bg-zinc-50 py-20 md:py-28"
       style={{
-        background: `radial-gradient(ellipse at center, rgba(232, 24, 77, 0.08) 0%, transparent 70%)`,
+        background: `radial-gradient(ellipse at center, rgba(232, 24, 77, 0.04) 0%, transparent 70%)`,
       }}
     >
       <div className="mx-auto max-w-7xl px-4 xl:px-8 flex flex-col items-center text-center gap-6">
