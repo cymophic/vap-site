@@ -18,6 +18,24 @@
   .scrollbar-gutter-auto {
     scrollbar-gutter: auto;
   }
+
+  .hero-gradient {
+    background: radial-gradient(
+      ellipse at center,
+      rgba(232, 24, 77, 0.08) 0%,
+      transparent 60%
+    );
+  }
+
+  @media (min-width: 768px) {
+    .hero-gradient {
+      background: radial-gradient(
+        ellipse at bottom,
+        rgba(232, 24, 77, 0.08) 0%,
+        transparent 60%
+      );
+    }
+  }
 }
 
 @layer base {
