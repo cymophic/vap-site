@@ -45,10 +45,10 @@ export default function Stats() {
             key={stat.label}
             className="flex flex-col items-center text-center gap-3"
           >
-            <div className="w-16 h-16 rounded-full bg-brand-accent/20 flex items-center justify-center">
+            <div className="w-16 h-16 rounded-full bg-brand-accent/10 flex items-center justify-center">
               <stat.icon size={24} className="text-brand-accent" />
             </div>
-            <span className="text-3xl md:text-4xl font-bold text-zinc-100">
+            <span className="text-3xl font-bold text-zinc-100">
               {stat.value}
             </span>
             <span className="text-xs font-semibold uppercase tracking-widest text-zinc-400">

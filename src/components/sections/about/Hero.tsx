@@ -4,13 +4,8 @@ import Button from "@/components/ui/Button";
 
 export default function Hero() {
   return (
-    <section
-      className="w-full bg-zinc-50 py-20 md:py-28"
-      style={{
-        background: `radial-gradient(ellipse at center, rgba(232, 24, 77, 0.04) 0%, transparent 70%)`,
-      }}
-    >
-      <div className="px-4 xl:px-8 flex flex-col items-center text-center gap-6">
+    <section className="w-full pt-20 md:pt-32 hero-gradient">
+      <div className="px-4 xl:px-8 pb-20 md:pb-32 flex flex-col items-center text-center gap-6">
         <p className="text-xs font-semibold uppercase tracking-widest text-zinc-500">
           About Us
         </p>
@@ -44,6 +39,8 @@ export default function Hero() {
           </Link>
         </div>
       </div>
+
+      <div className="hidden md:block h-px bg-linear-to-r from-transparent via-zinc-200/80 to-transparent" />
     </section>
   );
 }
