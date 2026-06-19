@@ -31,7 +31,7 @@ export default function Org() {
       <div className="shrink-0">
         <div className="relative shadow-2xl w-72 md:w-96 aspect-3/4 rounded-3xl overflow-hidden bg-zinc-100 mx-auto">
           <Image
-            src="/assets/about/org.jpg"
+            src="/assets/about/team.jpg"
             alt="Virtual Assistant Provider team"
             fill
             className="object-cover"
