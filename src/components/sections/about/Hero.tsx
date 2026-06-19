@@ -40,7 +40,7 @@ export default function Hero() {
         </div>
       </div>
 
-      <div className="hidden md:block h-px bg-linear-to-r from-transparent via-zinc-200/80 to-transparent" />
+      <div className="hidden md:block h-px bg-linear-to-r from-transparent via-zinc-300/80 to-transparent" />
     </section>
   );
 }

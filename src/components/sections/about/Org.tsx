@@ -2,7 +2,7 @@ import Image from "next/image";
 
 export default function Org() {
   return (
-    <section className="w-full bg-zinc-100 py-24">
+    <section className="w-full bg-zinc-100 py-28">
       <div className="mx-auto max-w-5xl px-4 xl:px-8 flex flex-col md:flex-row md:items-center gap-18">
         {/* Left: Text */}
         <div className="flex flex-col gap-6 flex-1">

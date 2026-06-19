@@ -3,7 +3,7 @@ import { stats } from "@/lib/site";
 
 export default function Founder() {
   return (
-    <section className="flex flex-col md:flex-row md:items-center gap-18 py-24">
+    <section className="flex flex-col md:flex-row md:items-center gap-18 py-28">
       {/* Left: Image */}
       <div className="shrink-0">
         <div className="relative shadow-2xl w-72 md:w-96 aspect-3/4 rounded-3xl overflow-hidden bg-zinc-100 mx-auto">
