@@ -4,7 +4,7 @@ import Button from "@/components/ui/Button";
 export default function ActionBanner() {
   return (
     <section className="w-full bg-brand-accent/8 py-16">
-      <div className="mx-auto max-w-7xl px-4 xl:px-8 flex flex-col md:flex-row items-center justify-between gap-8 md:gap-12">
+      <div className="mx-auto max-w-7xl px-0 md:px-8 flex flex-col md:flex-row items-center justify-between gap-8 md:gap-12">
         {/* Text */}
         <h2 className="text-3xl md:text-4xl font-bold text-brand-accent tracking-tight text-center md:text-left">
           Start delegating your daily tasks

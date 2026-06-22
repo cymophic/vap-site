@@ -7,7 +7,7 @@ export default function Footer() {
 
   return (
     <footer className="w-full bg-zinc-900 mt-auto">
-      <div className="mx-auto max-w-7xl w-full px-4 xl:px-0 py-12 flex flex-col gap-8">
+      <div className="mx-auto max-w-7xl w-full px-4 md:px-8 py-12 flex flex-col gap-8">
         {/* Top: Logo + Nav */}
         <div className="flex flex-col md:flex-row md:items-center justify-between gap-8">
           {/* Logo */}

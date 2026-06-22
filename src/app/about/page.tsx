@@ -25,7 +25,7 @@ export default function About() {
       <div className="w-full max-w-7xl mx-auto">
         <Clients />
       </div>
-      <div className="w-full max-w-7xl mx-auto pt-30">
+      <div className="w-full max-w-7xl mx-auto py-30">
         <Services />
       </div>
       <div className="w-full max-w-3xl mx-auto py-30">
