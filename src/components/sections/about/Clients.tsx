@@ -10,7 +10,7 @@ export default function Clients() {
       <p className="text-xs font-semibold uppercase text-center tracking-widest text-zinc-500">
         Trusted by Businesses Worldwide
       </p>
-      <div className="grid grid-cols-3 xl:grid-cols-5 gap-x-8 gap-y-20 items-center justify-items-center">
+      <div className="grid grid-cols-3 xl:grid-cols-5 gap-x-8 gap-y-20 items-center px-8 justify-items-center  justify-center">
         {logos.map((logo) => (
           <Image
             key={logo.src}
