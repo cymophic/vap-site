@@ -147,7 +147,7 @@ export default function Services() {
         {services.map((service, i) => (
           <div
             key={service.title}
-            className="bg-white rounded-2xl border border-zinc-200 overflow-hidden"
+            className="bg-white rounded-2xl border border-zinc-200 overflow-hidden shadow-sm"
           >
             {/* Image */}
             <div className="relative w-full aspect-video bg-zinc-100">

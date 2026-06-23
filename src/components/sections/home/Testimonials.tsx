@@ -118,7 +118,7 @@ export default function Testimonials() {
         {visible.map((testimonial, i) => (
           <div
             key={i}
-            className="flex-1 bg-white rounded-2xl border border-zinc-200 p-6 flex flex-col gap-4"
+            className="flex-1 bg-white rounded-2xl border border-zinc-200 p-6 flex flex-col gap-4 shadow-sm"
           >
             {/* Stars */}
             <div className="flex gap-0.5">

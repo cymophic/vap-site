@@ -49,7 +49,7 @@ export default function Process() {
         {steps.map((step, i) => (
           <React.Fragment key={step.title}>
             {/* Card */}
-            <div className="relative flex-1 bg-white rounded-2xl border border-zinc-200 flex flex-col items-center text-center gap-6 px-8 py-12">
+            <div className="relative flex-1 bg-white rounded-2xl border border-zinc-200 flex flex-col items-center text-center gap-6 px-8 py-12 shadow-sm">
               {/* Step Number */}
               <span className="absolute top-0 left-1/2 -translate-x-1/2 -translate-y-1/2 w-8 h-8 rounded-full bg-brand-accent text-white text-sm font-bold flex items-center justify-center">
                 {i + 1}

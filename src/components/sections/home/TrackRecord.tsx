@@ -24,7 +24,7 @@ export default function TrackRecord() {
       {/* Right: Bento Grid */}
       <div className="flex-1 flex flex-col gap-4">
         {/* Large top card */}
-        <div className="bg-white rounded-2xl border border-zinc-200 p-8 flex flex-col gap-4">
+        <div className="bg-white rounded-2xl border border-zinc-200 p-8 flex flex-col gap-4 shadow-sm">
           <div className="flex flex-col gap-1">
             <span className="text-4xl md:text-5xl font-bold text-zinc-700">
               {stats.completedProjects.toLocaleString()}+
@@ -40,7 +40,7 @@ export default function TrackRecord() {
 
         {/* Bottom two cards */}
         <div className="flex gap-4">
-          <div className="flex-1 bg-white rounded-2xl border border-zinc-200 p-8 flex flex-col gap-2">
+          <div className="flex-1 bg-white rounded-2xl border border-zinc-200 p-8 flex flex-col gap-2 shadow-sm">
             <span className="text-4xl md:text-5xl font-bold text-zinc-700">
               {stats.yearStarted}
             </span>
@@ -48,7 +48,7 @@ export default function TrackRecord() {
               Year Started
             </span>
           </div>
-          <div className="flex-1 bg-white rounded-2xl border border-zinc-200 p-8 flex flex-col gap-2">
+          <div className="flex-1 bg-white rounded-2xl border border-zinc-200 p-8 flex flex-col gap-2 shadow-sm">
             <span className="text-4xl md:text-5xl font-bold text-zinc-700">
               {stats.totalClients}+
             </span>
