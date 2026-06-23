@@ -6,9 +6,9 @@ export const country = "Philippines";
 // Navigation links for the website
 export const navLinks: { href: string; label: string }[] = [
   { label: "Home", href: "/" },
+  { label: "Services", href: "/services/" },
   { label: "About", href: "/about/" },
   { label: "Contact", href: "/contact/" },
-  { label: "Services", href: "/services/" },
 ];
 
 // Client statistics
