@@ -51,16 +51,21 @@ jennyannvalenciano.com/
 ├── public/                               # Static assets
 ├── src/
 │   ├── app/
+│   │   ├── coming-soon.tsx               # Work in progress page
+│   │   ├── favicon.ico                   # Favicon
 │   │   ├── globals.css                   # Global styles and Tailwind imports
 │   │   ├── layout.tsx                    # Root layout component
 │   │   ├── not-found.tsx                 # 404 page
 │   │   └── page.tsx                      # Homepage
 │   ├── components/
 │   │   ├── layout/
-│   │   │   └── header/
-│   │   │       └── Header.tsx            # Site header and navigation
+│   │   │   ├── header/                   # Site header
+│   │   │   └── footer/                   # Site footer
+│   │   ├── sections/
+│   │   │   └── home/                     # Homepage sections
 │   │   └── ui/
-│   │       └── Underline.tsx             # Animated underline component
+│   │       ├── Button.tsx                # Reusable button
+│   │       └── Underline.tsx             # Animated underline for hovers
 │   └── lib/
 │       ├── utils/
 │       │   └── cn.ts                     # Class name utility

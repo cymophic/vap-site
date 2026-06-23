@@ -6,7 +6,17 @@ export const country = "Philippines";
 // Navigation links for the website
 export const navLinks: { href: string; label: string }[] = [
   { label: "Home", href: "/" },
+  { label: "Services", href: "/services/" },
   { label: "About", href: "/about/" },
   { label: "Contact", href: "/contact/" },
-  { label: "Services", href: "/services/" },
 ];
+
+// Client statistics
+export const stats = {
+  yearStarted: 2008,
+  rating: 5.0,
+  hours: 51000,
+  yearsOfExperience: 18,
+  completedProjects: 2500,
+  totalClients: 150,
+};

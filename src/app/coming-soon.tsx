@@ -1,3 +1,5 @@
+import Link from "next/link";
+
 const SITE_MODE = process.env.NEXT_PUBLIC_SITE_MODE;
 
 export default function ComingSoon({
@@ -10,26 +12,26 @@ export default function ComingSoon({
   }
 
   return (
-    <div className="flex flex-col items-center justify-center flex-1 px-7 text-center gap-8">
+    <div className="flex flex-col items-center justify-center flex-1 px-7 text-center gap-8 min-h-[calc(100vh-var(--header-height))]">
       <div className="flex flex-col gap-4">
-        <p className="text-5xl font-semibold tracking-tight text-brand-accent">
+        <p className="text-4xl md:text-5xl font-semibold tracking-tight text-brand-accent">
           Coming Soon
         </p>
-        <p className="text-zinc-500 text-base max-w-sm">
+        <p className="text-zinc-500 text-sm md:text-base max-w-sm">
           Something new is on the way.
           <br />
           Please check back soon.
         </p>
       </div>
 
-      <p className="text-zinc-500 max-w-sm">
+      <p className="text-zinc-500 text-sm md:text-base max-w-sm">
         In the meantime, feel free to reach out at{" "}
-        <a
+        <Link
           href="mailto:contact@jennyannvalenciano.com"
           className="text-brand-accent underline underline-offset-4 hover:opacity-70 transition-opacity"
         >
           contact@jennyannvalenciano.com
-        </a>
+        </Link>
       </p>
     </div>
   );
