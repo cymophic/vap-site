@@ -22,13 +22,13 @@ export default function About() {
       <div className="-mx-8 xl:-mx-12">
         <Stats />
       </div>
-      <div className="w-full max-w-7xl mx-auto">
+      <div className="w-full max-w-7xl mx-auto pt-16">
         <Clients />
       </div>
-      <div className="w-full max-w-7xl mx-auto py-30">
+      <div className="w-full max-w-7xl mx-auto pt-16">
         <Services />
       </div>
-      <div className="w-full max-w-3xl mx-auto py-30">
+      <div className="w-full max-w-3xl mx-auto py-34">
         <FAQ />
       </div>
       <div className="-mx-8 xl:-mx-12">
