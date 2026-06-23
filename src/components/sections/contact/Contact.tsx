@@ -21,7 +21,7 @@ export default function Contact() {
   }
 
   return (
-    <section className="w-full flex flex-col md:flex-row gap-12 md:gap-24 md:items-start">
+    <section className="w-full flex flex-col md:flex-row gap-12 md:gap-24 md:items-start mb-16">
       {/* Left: Info */}
       <div className="flex flex-col gap-8 flex-1">
         <div className="flex flex-col gap-4">
