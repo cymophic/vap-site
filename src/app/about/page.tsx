@@ -19,7 +19,7 @@ export default function About() {
       <div className="-mx-4 xl:-mx-8">
         <Org />
       </div>
-      <div className="-mx-8 xl:-mx-12">
+      <div className="-mx-7 xl:-mx-11">
         <Stats />
       </div>
       <div className="w-full max-w-7xl mx-auto pt-16">
@@ -31,7 +31,7 @@ export default function About() {
       <div className="w-full max-w-3xl mx-auto py-34">
         <FAQ />
       </div>
-      <div className="-mx-8 xl:-mx-12">
+      <div className="-mx-7 xl:-mx-11">
         <ActionBanner />
       </div>
     </div>
