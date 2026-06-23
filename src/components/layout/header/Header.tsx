@@ -112,7 +112,7 @@ function MobileMenu({ isOpen, onClose }: MobileMenuProps) {
             href={link.href}
             onClick={onClose}
             className={cn(
-              "text-xl font-normal text-zinc-700 hover:text-brand-accent",
+              "text-lg font-normal text-zinc-700 hover:text-brand-accent",
               pathname === link.href && "text-brand-accent",
             )}
           >
