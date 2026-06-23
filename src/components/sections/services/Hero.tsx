@@ -35,7 +35,7 @@ export default function Hero() {
       </div>
 
       {/* Right: Image */}
-      <div className="flex-1 flex justify-center">
+      <div className="hidden md:flex flex-1 justify-center">
         <div className="relative shadow-2xl w-full max-w-sm aspect-3/4 rounded-3xl overflow-hidden bg-zinc-100">
           <Image
             src="/assets/services/hero.jpg"
