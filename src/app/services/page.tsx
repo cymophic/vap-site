@@ -23,7 +23,7 @@ export default function Services() {
       <div className="w-full max-w-3xl mx-auto pb-30">
         <FAQ />
       </div>
-      <div className="-mx-8 xl:-mx-12">
+      <div className="-mx-7 xl:-mx-11">
         <ActionBanner />
       </div>
     </div>
