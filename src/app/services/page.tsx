@@ -8,7 +8,7 @@ import ActionBanner from "@/components/sections/about/ActionBanner";
 export default function Services() {
   return (
     <div className="mx-auto w-full flex flex-1 flex-col font-sans pt-38 px-4 xl:px-8">
-      <div className="w-full max-w-7xl mx-auto py-18">
+      <div className="w-full max-w-7xl mx-auto pt-12 pb-18">
         <Hero />
       </div>
       <div className="w-full max-w-7xl mx-auto">
