@@ -1,5 +1,6 @@
 import Image from "next/image";
 import Link from "next/link";
+import CalButton from "@/components/ui/CalButton";
 import Button from "@/components/ui/Button";
 
 export default function Hero() {
@@ -19,16 +20,20 @@ export default function Hero() {
           an experienced and dedicated team.
         </p>
         <div className="flex flex-col md:flex-row gap-4 items-center md:items-start">
-          <Button variant="primary" size="lg" className="w-full md:w-auto px-8">
+          <CalButton
+            variant="primary"
+            size="lg"
+            className="w-full md:w-auto px-8"
+          >
             Book a Meeting
-          </Button>
+          </CalButton>
           <Link href="/contact/" className="w-full md:w-auto">
             <Button
               variant="secondary"
               size="lg"
               className="w-full md:w-auto px-8"
             >
-              Let&#39;s Chat
+              Contact Us
             </Button>
           </Link>
         </div>

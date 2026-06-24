@@ -7,7 +7,7 @@ import { useState } from "react";
 import { IconMenu2, IconX } from "@tabler/icons-react";
 
 import Underline from "@/components/ui/Underline";
-import Button from "@/components/ui/Button";
+import CalButton from "@/components/ui/CalButton";
 
 import { navLinks } from "@/lib/site";
 import { cn } from "@/lib/utils/cn";
@@ -86,9 +86,9 @@ type ActionButton = {
 };
 function ActionButton({ text = "Let's Talk", className }: ActionButton) {
   return (
-    <Button variant="primary" size="lg" className={className}>
+    <CalButton variant="primary" size="lg" className={className}>
       <span className="whitespace-nowrap">{text}</span>
-    </Button>
+    </CalButton>
   );
 }
 

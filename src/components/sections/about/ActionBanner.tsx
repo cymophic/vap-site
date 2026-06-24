@@ -1,4 +1,5 @@
 import Link from "next/link";
+import CalButton from "@/components/ui/CalButton";
 import Button from "@/components/ui/Button";
 
 export default function ActionBanner() {
@@ -12,13 +13,13 @@ export default function ActionBanner() {
 
         {/* Buttons */}
         <div className="flex flex-col md:flex-row gap-4 items-center shrink-0">
-          <Button
+          <CalButton
             variant="primary"
             size="lg"
             className="px-8 w-full md:w-auto whitespace-nowrap"
           >
             Book a Meeting
-          </Button>
+          </CalButton>
           <Link
             href="/contact/"
             className="w-full md:w-auto flex justify-center"
@@ -28,7 +29,7 @@ export default function ActionBanner() {
               size="lg"
               className="px-8 w-full md:w-auto whitespace-nowrap bg-white/90! border border-transparent hover:border-zinc-300"
             >
-              Let&#39;s Chat
+              Contact Us
             </Button>
           </Link>
         </div>

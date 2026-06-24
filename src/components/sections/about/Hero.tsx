@@ -1,5 +1,6 @@
 import { stats } from "@/lib/site";
 import Link from "next/link";
+import CalButton from "@/components/ui/CalButton";
 import Button from "@/components/ui/Button";
 
 export default function Hero() {
@@ -21,20 +22,20 @@ export default function Hero() {
           Our mission is to help businesses worldwide reclaim it.
         </p>
         <div className="flex flex-col sm:flex-row gap-4">
-          <Button
+          <CalButton
             variant="primary"
             size="lg"
             className="px-8 whitespace-nowrap"
           >
             Book a Meeting
-          </Button>
+          </CalButton>
           <Link href="/contact/">
             <Button
               variant="secondary"
               size="lg"
               className="px-8 whitespace-nowrap"
             >
-              Let&#39;s Chat
+              Contact Us
             </Button>
           </Link>
         </div>

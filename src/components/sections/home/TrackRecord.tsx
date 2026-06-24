@@ -15,7 +15,11 @@ export default function TrackRecord() {
           worldwide to handle the work that keeps operations running smoothly.
         </p>
         <Link href="/contact/" className="w-full md:w-fit">
-          <Button variant="primary" size="lg" className="w-1/2 md:w-auto px-8">
+          <Button
+            variant="primary"
+            size="lg"
+            className="w-1/2 min-w-48 md:w-auto px-8"
+          >
             Get in Touch
           </Button>
         </Link>
@@ -24,7 +28,7 @@ export default function TrackRecord() {
       {/* Right: Bento Grid */}
       <div className="flex-1 flex flex-col gap-4">
         {/* Large top card */}
-        <div className="bg-white rounded-2xl border border-zinc-200 p-8 flex flex-col gap-4 shadow-sm">
+        <div className="bg-white rounded-2xl border border-zinc-200 p-5 md:p-8 flex flex-col gap-4 shadow-sm">
           <div className="flex flex-col gap-1">
             <span className="text-4xl md:text-5xl font-bold text-zinc-700">
               {stats.completedProjects.toLocaleString()}+
@@ -40,7 +44,7 @@ export default function TrackRecord() {
 
         {/* Bottom two cards */}
         <div className="flex gap-4">
-          <div className="flex-1 bg-white rounded-2xl border border-zinc-200 p-8 flex flex-col gap-2 shadow-sm">
+          <div className="flex-1 bg-white rounded-2xl border border-zinc-200 p-5 md:p-8 flex flex-col gap-2 shadow-sm">
             <span className="text-4xl md:text-5xl font-bold text-zinc-700">
               {stats.yearStarted}
             </span>
@@ -48,7 +52,7 @@ export default function TrackRecord() {
               Year Started
             </span>
           </div>
-          <div className="flex-1 bg-white rounded-2xl border border-zinc-200 p-8 flex flex-col gap-2 shadow-sm">
+          <div className="flex-1 bg-white rounded-2xl border border-zinc-200 p-5 md:p-8 flex flex-col gap-2 shadow-sm">
             <span className="text-4xl md:text-5xl font-bold text-zinc-700">
               {stats.totalClients}+
             </span>
