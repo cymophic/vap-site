@@ -34,7 +34,7 @@ export default function RootLayout({
       >
         <ComingSoon>
           <Header />
-          <main className="mx-auto w-full px-3">{children}</main>
+          <main className="mx-auto w-full">{children}</main>
           <Footer />
         </ComingSoon>
 
