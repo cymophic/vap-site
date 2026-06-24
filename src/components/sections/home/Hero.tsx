@@ -1,6 +1,7 @@
 import Image from "next/image";
 import Link from "next/link";
 import { IconCheck, IconStarFilled } from "@tabler/icons-react";
+import CalButton from "@/components/ui/CalButton";
 import Button from "@/components/ui/Button";
 import { stats } from "@/lib/site";
 
@@ -51,13 +52,13 @@ export default function Hero() {
         <div className="flex flex-col md:flex-row md:gap-4 items-center">
           {/* Book a Meeting Button */}
           <div className="mt-2 w-full md:w-fit flex justify-center sm:justify-left">
-            <Button
+            <CalButton
               variant="primary"
               size="lg"
               className="w-full md:w-auto max-w-md px-8"
             >
               Book a Meeting
-            </Button>
+            </CalButton>
           </div>
 
           {/* Contact Us Button */}
