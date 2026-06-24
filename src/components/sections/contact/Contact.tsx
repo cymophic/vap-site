@@ -84,7 +84,7 @@ export default function Contact() {
       </div>
 
       {/* Right: Form */}
-      <div className="flex-1 bg-white rounded-2xl border border-zinc-200 p-8 flex flex-col gap-6">
+      <div className="flex-1 bg-white rounded-2xl border border-zinc-200 p-4 pt-8 md:p-8 flex flex-col gap-6">
         <div className="flex flex-col gap-1 text-center">
           <h2 className="text-2xl font-semibold text-zinc-900">
             Send Us a Message
