@@ -10,6 +10,7 @@ jobs:
     uses: ./.github/workflows/build.yml
     with:
       NEXT_PUBLIC_SITE_MODE: ${{ vars.NEXT_PUBLIC_SITE_MODE }}
+      NEXT_PUBLIC_CONTACT_API_URL: ${{ vars.NEXT_PUBLIC_CONTACT_API_URL }}
 
   deploy:
     needs: build

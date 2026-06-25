@@ -10,7 +10,7 @@ export default function Hero() {
         <p className="text-xs font-semibold uppercase tracking-widest text-zinc-500">
           About Us
         </p>
-        <h1 className="text-4xl md:text-5xl font-bold tracking-tight leading-tight">
+        <h1 className="text-4xl md:text-6xl font-bold tracking-tight leading-tight">
           <span className="text-zinc-900">Delivering Virtual Support,</span>
           <br />
           <span className="text-brand-accent">

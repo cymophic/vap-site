@@ -9,29 +9,29 @@ import ActionBanner from "@/components/sections/home/ActionBanner";
 
 export default function Home() {
   return (
-    <div className="flex flex-1 flex-col font-sans pt-38 pb-18 px-4 xl:px-8 gap-34">
-      <div className="w-full max-w-7xl mx-auto">
+    <div className="flex flex-1 flex-col font-sans pt-38 pb-18 gap-34">
+      <div className="w-full max-w-7xl mx-auto px-8">
         <Hero />
       </div>
-      <div className="w-full max-w-7xl mx-auto">
+      <div className="w-full max-w-7xl mx-auto px-8">
         <Clients />
       </div>
-      <div className="w-full max-w-7xl mx-auto">
+      <div className="w-full max-w-7xl mx-auto px-8">
         <TrackRecord />
       </div>
-      <div className="w-full max-w-7xl mx-auto">
+      <div className="w-full max-w-7xl mx-auto px-8">
         <Services />
       </div>
-      <div className="w-full max-w-7xl mx-auto">
+      <div className="w-full max-w-7xl mx-auto px-8">
         <Process />
       </div>
-      <div className="w-full max-w-7xl mx-auto">
+      <div className="w-full max-w-7xl mx-auto px-8">
         <Testimonials />
       </div>
-      <div className="w-full max-w-3xl mx-auto">
+      <div className="w-full max-w-3xl mx-auto px-8">
         <FAQ />
       </div>
-      <div className="w-full max-w-7xl mx-auto">
+      <div className="w-full max-w-7xl mx-auto px-8">
         <ActionBanner />
       </div>
     </div>

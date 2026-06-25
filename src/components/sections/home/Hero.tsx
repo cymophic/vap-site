@@ -23,9 +23,10 @@ export default function Hero() {
         </p>
 
         {/* Heading */}
-        <h1 className="-mt-4 text-4xl md:text-6xl font-bold text-center md:text-left leading-tight tracking-tight text-zinc-900">
-          You focus on Growth. <br /> We Handle{" "}
-          <span className="text-brand-accent">the Rest.</span>
+        <h1 className="-mt-4 text-5xl md:text-6xl font-bold text-center md:text-left leading-tight tracking-tight text-zinc-900">
+          You focus <span className="whitespace-nowrap">on Growth.</span> <br />{" "}
+          We Handle{" "}
+          <span className="text-brand-accent whitespace-nowrap">the Rest.</span>
         </h1>
 
         {/* Subheading */}
