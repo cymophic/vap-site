@@ -13,3 +13,7 @@ bucket_name = "jenny-vap-site"
 # Budget
 budget_limit_usd   = "100.0"
 budget_alert_email = ["name@email.com"]
+
+# Email
+recipient_email = "hello@jennyannvalenciano.com"
+sender_email    = "hello@jennyannvalenciano.com"

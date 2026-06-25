@@ -5,19 +5,41 @@ import { useState } from "react";
 import { IconPhone, IconMail, IconBrandLinkedin } from "@tabler/icons-react";
 import Button from "@/components/ui/Button";
 
+type Status = "idle" | "loading" | "success" | "error";
+
 export default function Contact() {
   const [form, setForm] = useState({
     name: "",
     email: "",
     phone: "",
     message: "",
+    website: "",
   });
+  const [status, setStatus] = useState<Status>("idle");
 
-  // Handle form input change
+  // Handles form input changes, updating the form state as the user types
   function handleChange(
     e: React.ChangeEvent<HTMLInputElement | HTMLTextAreaElement>,
   ) {
     setForm((prev) => ({ ...prev, [e.target.name]: e.target.value }));
+  }
+
+  // Handles form submission, sending the contact data to the backend
+  async function handleSubmit() {
+    setStatus("loading");
+    try {
+      const res = await fetch(process.env.NEXT_PUBLIC_CONTACT_API_URL!, {
+        method: "POST",
+        headers: { "Content-Type": "application/json" },
+        body: JSON.stringify(form),
+      });
+
+      if (!res.ok) throw new Error();
+      setStatus("success");
+      setForm({ name: "", email: "", phone: "", message: "", website: "" });
+    } catch {
+      setStatus("error");
+    }
   }
 
   return (
@@ -151,10 +173,38 @@ export default function Contact() {
               className="w-full px-4 py-3 rounded-lg border border-zinc-200 text-sm text-zinc-800 placeholder:text-zinc-500/70 focus:outline-none focus:ring-2 focus:ring-brand-accent/30 focus:border-brand-accent transition resize-none"
             />
           </div>
+
+          {/* Honeypot for bot detection */}
+          <input
+            type="text"
+            name="website"
+            className="hidden"
+            tabIndex={-1}
+            autoComplete="off"
+            value={form.website || ""}
+            onChange={handleChange}
+          />
         </div>
 
-        <Button variant="primary" size="lg" className="w-full">
-          Send Message
+        {status === "success" && (
+          <p className="text-sm text-center text-green-600 font-medium">
+            Message sent! We&#39;ll be in touch soon.
+          </p>
+        )}
+        {status === "error" && (
+          <p className="text-sm text-center text-red-500 font-medium">
+            Something went wrong. Please try again.
+          </p>
+        )}
+
+        <Button
+          variant="primary"
+          size="lg"
+          className="w-full"
+          onClick={handleSubmit}
+          disabled={status === "loading"}
+        >
+          {status === "loading" ? "Sending..." : "Send Message"}
         </Button>
       </div>
     </section>

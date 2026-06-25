@@ -43,3 +43,14 @@ variable "dev_origins" {
   type        = list(string)
   default     = []
 }
+
+# Email
+variable "recipient_email" {
+  description = "Email address to receive contact form submissions"
+  type        = string
+}
+
+variable "sender_email" {
+  description = "Email address to send contact form submissions from (must be SES verified)"
+  type        = string
+}

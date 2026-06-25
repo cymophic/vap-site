@@ -6,6 +6,9 @@ on:
       NEXT_PUBLIC_SITE_MODE:
         required: true
         type: string
+      NEXT_PUBLIC_CONTACT_API_URL:
+        required: true
+        type: string
 
 jobs:
   build:
@@ -35,6 +38,7 @@ jobs:
         run: npm run build
         env:
           NEXT_PUBLIC_SITE_MODE: ${{ inputs.NEXT_PUBLIC_SITE_MODE }}
+          NEXT_PUBLIC_CONTACT_API_URL: ${{ inputs.NEXT_PUBLIC_CONTACT_API_URL }}
 
       - name: Upload build artifact
         uses: actions/upload-artifact@v7
