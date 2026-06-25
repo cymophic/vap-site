@@ -3,18 +3,6 @@ import { SESClient, SendEmailCommand } from "@aws-sdk/client-ses";
 const ses = new SESClient({ region: process.env.AWS_REGION });
 
 export const handler = async (event) => {
-  const origin = event.headers.origin || event.headers.Origin || "*";
-  const corsHeaders = {
-    "Access-Control-Allow-Origin": origin,
-    "Access-Control-Allow-Methods": "POST, OPTIONS",
-    "Access-Control-Allow-Headers": "Content-Type",
-  };
-
-  // Handle preflight
-  if (event.requestContext?.http?.method === "OPTIONS") {
-    return { statusCode: 200, headers: corsHeaders, body: "" };
-  }
-
   try {
     const { name, email, phone, message, website } = JSON.parse(event.body);
 
@@ -22,7 +10,6 @@ export const handler = async (event) => {
     if (website) {
       return {
         statusCode: 200,
-        headers: corsHeaders,
         body: JSON.stringify({ success: true }),
       };
     }
@@ -30,7 +17,6 @@ export const handler = async (event) => {
     if (!name || !email || !message) {
       return {
         statusCode: 400,
-        headers: corsHeaders,
         body: JSON.stringify({ error: "Missing required fields." }),
       };
     }
@@ -53,14 +39,12 @@ export const handler = async (event) => {
 
     return {
       statusCode: 200,
-      headers: corsHeaders,
       body: JSON.stringify({ success: true }),
     };
   } catch (err) {
     console.error(err);
     return {
       statusCode: 500,
-      headers: corsHeaders,
       body: JSON.stringify({ error: "Failed to send message." }),
     };
   }

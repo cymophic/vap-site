@@ -53,6 +53,13 @@ resource "aws_lambda_permission" "contact_public" {
   function_url_auth_type = "NONE"
 }
 
+resource "aws_lambda_permission" "contact_public_invoke" {
+  statement_id  = "FunctionURLAllowPublicInvoke"
+  action        = "lambda:InvokeFunction"
+  function_name = aws_lambda_function.contact.function_name
+  principal     = "*"
+}
+
 # Lambda function
 resource "aws_lambda_function" "contact" {
   filename         = data.archive_file.contact_lambda.output_path
@@ -84,7 +91,7 @@ resource "aws_lambda_function_url" "contact" {
     allow_credentials = false
     allow_origins     = local.cors_origins
     allow_methods     = ["*"]
-    allow_headers     = ["content-type"]
+    allow_headers     = ["*"]
     max_age           = 86400
   }
 }
