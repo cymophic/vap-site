@@ -4,50 +4,116 @@ import { useState } from "react";
 import { IconPlus, IconMinus } from "@tabler/icons-react";
 import { cn } from "@/lib/utils/cn";
 
+type FAQAnswerBlock =
+  | { type: "text"; content: string }
+  | { type: "list"; items: string[] };
 type FAQ = {
   question: string;
-  answer: string;
+  answer: string | FAQAnswerBlock[];
 };
-
 const faqs: FAQ[] = [
   {
-    question: "What tools do you work with?",
+    question: "Do you offer a flexible billing method?",
     answer:
-      "We work with a wide range of tools including WordPress, Notion, Google Workspace, Microsoft Office, Canva, Adobe Photoshop, CapCut, Camtasia, Zoho, Salesforce, and more. If you use something not on the list, just ask — we're quick to adapt.",
-  },
-  {
-    question: "How do you communicate and give updates?",
-    answer:
-      "We keep communication open through email, chat, or phone — whichever works best for you. You'll receive regular updates on task progress so you're never left in the dark.",
-  },
-  {
-    question: "What are your working hours?",
-    answer:
-      "Your timezone is our timezone. We're flexible and have experience working with clients across the US, Canada, New Zealand, and the UK.",
-  },
-  {
-    question: "How do you handle revisions or mistakes?",
-    answer:
-      "We take ownership of our work. If something isn't right, we'll revise it promptly until you're satisfied — no hassle, no excuses.",
-  },
-  {
-    question: "Do you work with one client at a time or multiple?",
-    answer:
-      "We work with multiple clients, but every client receives dedicated attention. Your tasks are treated with the same care and priority regardless of workload.",
-  },
-  {
-    question: "Do you offer flexible billing?",
-    answer:
-      "Depending on your monthly needs, we offer both part-time and full-time virtual assistant services.",
+      "Yes. We offer flexible billing options based on your business needs. Whether you require ongoing monthly support, hourly assistance, or project-based services, we can create a plan that fits your budget and workload. Our goal is to provide cost-effective solutions without compromising quality.",
   },
   {
     question: "What payment methods do you accept?",
-    answer: "We accept bank transfers, wire transfers, and PayPal.",
+    answer: [
+      {
+        type: "text",
+        content:
+          "We accept secure payments through several trusted platforms, including:",
+      },
+      {
+        type: "list",
+        items: [
+          "PayPal",
+          "Wise (formerly TransferWise)",
+          "Other payment methods may be arranged depending on your location.",
+        ],
+      },
+      {
+        type: "text",
+        content:
+          "Invoices are provided for every payment to ensure complete transparency.",
+      },
+    ],
   },
   {
-    question: "How do you handle confidentiality?",
+    question:
+      "How do you ensure the security and confidentiality of client information?",
+    answer: [
+      {
+        type: "text",
+        content:
+          "We understand that confidentiality is essential. We take data security seriously by following industry best practices, including:",
+      },
+      {
+        type: "list",
+        items: [
+          "Signing Non-Disclosure Agreements (NDAs) upon request",
+          "Keeping all client information strictly confidential",
+          "Using secure password management practices",
+          "Accessing client systems only through authorized accounts",
+          "Working with trusted and secure cloud-based collaboration tools",
+          "Never sharing, selling, or disclosing client information to third parties",
+        ],
+      },
+      {
+        type: "text",
+        content:
+          "Your business data is treated with the highest level of professionalism, security, and integrity.",
+      },
+    ],
+  },
+  {
+    question: "What services do you offer?",
+    answer: [
+      {
+        type: "text",
+        content:
+          "We provide a wide range of virtual assistant services, including:",
+      },
+      {
+        type: "list",
+        items: [
+          "Executive Virtual Assistance",
+          "Email & Calendar Management",
+          "Social Media Management",
+          "Graphic Design",
+          "Video Editing",
+          "CRM Management",
+          "Project Management",
+          "AI Content Creation & Automation",
+        ],
+      },
+      {
+        type: "text",
+        content:
+          "If you don't see the service you need, feel free to contact us. We'd be happy to discuss your requirements.",
+      },
+    ],
+  },
+  {
+    question: "Do I need to sign a long-term contract?",
     answer:
-      "We prioritize honesty and confidentiality above all. Your personal and business data is protected using up-to-date security practices, and any third parties we work with are held to the same standard.",
+      "No. We offer flexible service agreements with no long-term commitment required. You can hire us for a one-time project, short-term assistance, or ongoing support depending on your business needs.",
+  },
+  {
+    question: "How quickly can we get started?",
+    answer:
+      "Most projects can begin within 1–5 business days, depending on availability and project requirements. After our initial consultation, we'll provide a timeline and onboarding process.",
+  },
+  {
+    question: "Can you work with clients from different countries?",
+    answer:
+      "Absolutely. We work remotely with businesses and entrepreneurs worldwide. We communicate through email, Zoom, Google Meet, Slack, Microsoft Teams, WhatsApp, and other collaboration tools to ensure seamless communication regardless of location or time zone.",
+  },
+  {
+    question: "Can I customize the services I need?",
+    answer:
+      "Yes. Every business is unique, so we offer customized solutions tailored to your goals. Whether you need a few hours of support each week or a dedicated virtual assistant, we'll create a package that works best for you.",
   },
 ];
 
@@ -112,9 +178,28 @@ export default function FAQ() {
               )}
             >
               <div className="overflow-hidden">
-                <p className="text-zinc-500 leading-relaxed pb-6">
-                  {faq.answer}
-                </p>
+                {Array.isArray(faq.answer) ? (
+                  <div className="text-zinc-500 leading-relaxed pb-6 space-y-3">
+                    {faq.answer.map((block, j) =>
+                      block.type === "list" ? (
+                        <ul
+                          key={j}
+                          className="list-disc list-outside pl-10 space-y-1"
+                        >
+                          {block.items.map((item: string, k: number) => (
+                            <li key={k}>{item}</li>
+                          ))}
+                        </ul>
+                      ) : (
+                        <p key={j}>{block.content}</p>
+                      ),
+                    )}
+                  </div>
+                ) : (
+                  <p className="text-zinc-500 leading-relaxed pb-6">
+                    {faq.answer}
+                  </p>
+                )}
               </div>
             </div>
           </div>
