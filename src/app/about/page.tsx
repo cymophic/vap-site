@@ -9,7 +9,7 @@ import ActionBanner from "@/components/sections/about/ActionBanner";
 
 export default function About() {
   return (
-    <div className="mx-auto w-full flex flex-1 flex-col font-sans pt-38">
+    <div className="mx-auto w-full flex flex-1 flex-col font-sans pt-20 md:pt-38">
       <div className="w-full max-w-7xl mx-auto px-8">
         <Hero />
       </div>

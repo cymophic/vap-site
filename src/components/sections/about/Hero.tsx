@@ -7,7 +7,7 @@ export default function Hero() {
   return (
     <section className="w-full pt-20 md:pt-32 hero-gradient">
       <div className="px-4 xl:px-8 pb-20 md:pb-32 flex flex-col items-center text-center gap-6">
-        <p className="text-xs font-semibold uppercase tracking-widest text-zinc-500">
+        <p className="text-xs font-semibold uppercase tracking-widest text-brand-accent">
           About Us
         </p>
         <h1 className="text-4xl md:text-6xl font-bold tracking-tight leading-tight">
