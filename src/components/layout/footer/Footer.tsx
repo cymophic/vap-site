@@ -48,8 +48,9 @@ export default function Footer() {
 
         {/* Copyright */}
         <p className="text-xs font-medium text-white/80 text-center">
-          © {stats.yearStarted} - {currentYear} Virtual Assistant Provider. All
-          rights reserved.
+          © {stats.yearStarted} - {currentYear} Virtual Assistant Provider.{" "}
+          <br className="block md:hidden" />
+          All rights reserved.
         </p>
       </div>
     </footer>
