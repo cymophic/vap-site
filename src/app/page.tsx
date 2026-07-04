@@ -9,7 +9,7 @@ import ActionBanner from "@/components/sections/home/ActionBanner";
 
 export default function Home() {
   return (
-    <div className="flex flex-1 flex-col font-sans pt-38 pb-18 gap-34">
+    <div className="flex flex-1 flex-col font-sans pt-38 gap-34">
       <div className="w-full max-w-7xl mx-auto px-8">
         <Hero />
       </div>
@@ -31,7 +31,7 @@ export default function Home() {
       <div className="w-full max-w-3xl mx-auto px-8">
         <FAQ />
       </div>
-      <div className="w-full max-w-7xl mx-auto px-8">
+      <div className="w-full">
         <ActionBanner />
       </div>
     </div>
