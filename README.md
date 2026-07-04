@@ -48,23 +48,35 @@ jennyannvalenciano.com/
 │   │   ├── check.yml                     # PR validation workflow
 │   │   └── deploy.yml                    # Deployment workflow
 │   └── dependabot.yml                    # Automatic dependency updates
+├── lambda/
+│   └── contact/                          # Contact form Lambda handler
 ├── public/                               # Static assets
 ├── src/
 │   ├── app/
+│   │   ├── about/
+│   │   │   └── page.tsx                  # About page
+│   │   ├── contact/
+│   │   │   └── page.tsx                  # Contact page
+│   │   ├── services/
+│   │   │   └── page.tsx                  # Services page
 │   │   ├── coming-soon.tsx               # Work in progress page
 │   │   ├── favicon.ico                   # Favicon
 │   │   ├── globals.css                   # Global styles and Tailwind imports
 │   │   ├── layout.tsx                    # Root layout component
 │   │   ├── not-found.tsx                 # 404 page
-│   │   └── page.tsx                      # Homepage
+│   │   └── page.tsx                      # Home page
 │   ├── components/
 │   │   ├── layout/
 │   │   │   ├── header/                   # Site header
 │   │   │   └── footer/                   # Site footer
 │   │   ├── sections/
-│   │   │   └── home/                     # Homepage sections
+│   │   │   ├── about/                        # About page sections
+│   │   │   ├── contact/                      # Contact page sections
+│   │   │   ├── home/                         # Homepage sections
+│   │   │   └── services/                     # Services page sections
 │   │   └── ui/
 │   │       ├── Button.tsx                # Reusable button
+│   │       ├── CalButton.tsx             # Cal.com booking button wrapper
 │   │       └── Underline.tsx             # Animated underline for hovers
 │   └── lib/
 │       ├── utils/
@@ -74,12 +86,14 @@ jennyannvalenciano.com/
 │   ├── acm.tf                            # ACM SSL certificate
 │   ├── budgets.tf                        # AWS budget alerts
 │   ├── cloudfront.tf                     # CloudFront distribution, OAC, and functions
+│   ├── lambda.tf                         # Lambda function, URL, and IAM role
 │   ├── locals.tf                         # Centralized logic and data transformation layer
 │   ├── main.tf                           # Terraform and provider configuration
 │   ├── outputs.tf                        # Terraform output values
 │   ├── s3.tf                             # S3 bucket, policy, and access configuration
 │   ├── variables.tf                      # Input definitions
 │   └── terraform.tfvars.example          # Terraform variable template
+├── .env.example
 ├── .gitignore
 ├── eslint.config.mjs
 ├── next.config.ts
@@ -106,13 +120,21 @@ jennyannvalenciano.com/
     cd vap-site
     ```
 
-2. **Install dependencies:**
+2. **Copy environment variables:**
+
+    ```bash
+    cp .env.example .env.local
+    ```
+
+    Fill in the values in `.env.local`.
+
+3. **Install dependencies:**
 
     ```bash
     npm install
     ```
 
-3. **Start the development server:**
+4. **Start the development server:**
 
     ```bash
     npm run dev
@@ -158,6 +180,10 @@ bucket_name = "jenny-vap-site"
 # Budget
 budget_limit_usd   = "100.0"
 budget_alert_email = ["name@email.com"]
+
+# Email
+recipient_email = "hello@jennyannvalenciano.com"
+sender_email    = "noreply@jennyannvalenciano.com"
 ```
 
 ### Provision AWS Resources
@@ -174,6 +200,9 @@ This provisions:
 - CloudFront distribution with HTTPS
 - ACM SSL certificate for the custom domain
 - S3 bucket policy scoped to CloudFront only
+- Lambda function + Function URL for contact form
+- IAM role and policy for Lambda → SES access
+- SES email sending permissions
 
 ### DNS Setup
 
@@ -209,6 +238,7 @@ The following are configured in **Settings → Secrets and Variables → Actions
 | Name | Description |
 |---|---|
 | `NEXT_PUBLIC_SITE_MODE` | Controls which page is displayed (`live`, `coming_soon`, `maintenance`) |
+| `NEXT_PUBLIC_CONTACT_API_URL` | Lambda Function URL for the contact form |
 
 ### Process Breakdown
 
