@@ -160,7 +160,7 @@ export default function Services() {
             </div>
 
             {/* Content */}
-            <div className="p-6 flex flex-col gap-4">
+            <div className="p-6 flex flex-col">
               <div className="flex flex-col gap-1">
                 <h3 className="text-lg font-semibold text-zinc-900">
                   {service.title}
@@ -171,12 +171,12 @@ export default function Services() {
               </div>
 
               {/* Divider */}
-              <div className="w-full h-px bg-zinc-100" />
+              <div className="w-full h-px bg-zinc-100 mt-1" />
 
               {/* Accordion Toggle */}
               <button
                 onClick={() => toggle(i)}
-                className="flex items-center justify-between group"
+                className="flex items-center justify-between group mt-4"
               >
                 <span
                   className={cn(
@@ -197,7 +197,9 @@ export default function Services() {
               <div
                 className={cn(
                   "grid transition-all duration-300",
-                  openIndex === i ? "grid-rows-[1fr]" : "grid-rows-[0fr]",
+                  openIndex === i
+                    ? "grid-rows-[1fr] mt-4"
+                    : "grid-rows-[0fr] mt-0",
                 )}
               >
                 <ul className="overflow-hidden flex flex-col gap-2">
