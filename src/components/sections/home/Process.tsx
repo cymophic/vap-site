@@ -45,11 +45,11 @@ export default function Process() {
       </div>
 
       {/* Steps */}
-      <div className="flex flex-col lg:flex-row items-stretch gap-0 md:gap-0">
+      <div className="flex flex-col xl:flex-row items-stretch gap-0 md:gap-0">
         {steps.map((step, i) => (
           <React.Fragment key={step.title}>
             {/* Card */}
-            <div className="relative flex-1 bg-white rounded-2xl border border-zinc-200 flex flex-col items-center text-center gap-6 px-8 py-12 shadow-sm">
+            <div className="relative flex-1 bg-white rounded-2xl border border-zinc-200 flex flex-col items-center text-center gap-6 px-8 py-12 shadow-sm max-w-136 mx-auto">
               {/* Step Number */}
               <span className="absolute top-0 left-1/2 -translate-x-1/2 -translate-y-1/2 w-8 h-8 rounded-full bg-brand-accent text-white text-sm font-bold flex items-center justify-center">
                 {i + 1}
@@ -72,10 +72,10 @@ export default function Process() {
             {/* Connecting Dashed Line */}
             {i < steps.length - 1 && (
               <>
-                <div className="lg:hidden h-16 flex justify-center">
+                <div className="xl:hidden h-16 flex justify-center">
                   <div className="h-16 border-l-2 border-dashed border-zinc-300" />
                 </div>
-                <div className="hidden lg:block w-12 shrink-0 self-center border-t-2 border-dashed border-zinc-300" />
+                <div className="hidden xl:block w-12 shrink-0 self-center border-t-2 border-dashed border-zinc-300" />
               </>
             )}
           </React.Fragment>
