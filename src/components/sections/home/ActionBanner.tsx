@@ -4,38 +4,40 @@ import Button from "@/components/ui/Button";
 
 export default function ActionBanner() {
   return (
-    <section className="bg-brand-accent/8 rounded-2xl px-8 py-14 md:py-14 md:px-12 flex flex-col md:flex-row items-center justify-between gap-8 md:gap-12">
-      {/* Text */}
-      <div className="flex text-center md:text-left">
-        <h2 className="text-3xl md:text-4xl font-bold text-brand-accent tracking-tight">
-          Start delegating your daily tasks
-        </h2>
-      </div>
+    <section className="w-full bg-brand-accent/8 py-16">
+      <div className="mx-auto max-w-7xl px-4 md:px-8 flex flex-col md:flex-row items-center justify-between gap-8 md:gap-12">
+        {/* Text */}
+        <div className="flex text-center md:text-left">
+          <h2 className="text-3xl md:text-4xl font-bold text-brand-accent tracking-tight">
+            Start delegating your daily tasks
+          </h2>
+        </div>
 
-      {/* Buttons */}
-      <div className="flex flex-col md:flex-row gap-4 items-center w-full md:w-auto shrink-0">
-        {/* Book a Meeting Button */}
-        <CalButton
-          variant="primary"
-          size="lg"
-          className="px-8 w-full md:w-auto max-w-md whitespace-nowrap"
-        >
-          Book a Meeting
-        </CalButton>
-
-        {/* Learn More Button */}
-        <Link
-          href="/services/"
-          className="w-full md:w-auto max-w-md flex justify-center"
-        >
-          <Button
-            variant="secondary"
+        {/* Buttons */}
+        <div className="flex flex-col md:flex-row gap-4 items-center w-full md:w-auto shrink-0">
+          {/* Book a Meeting Button */}
+          <CalButton
+            variant="primary"
             size="lg"
-            className="px-8 w-full md:w-auto max-w-md whitespace-nowrap bg-white/90! border border-transparent hover:border-zinc-300"
+            className="px-8 w-full md:w-auto max-w-md whitespace-nowrap"
           >
-            Learn More
-          </Button>
-        </Link>
+            Book a Meeting
+          </CalButton>
+
+          {/* Learn More Button */}
+          <Link
+            href="/services/"
+            className="w-full md:w-auto max-w-md flex justify-center"
+          >
+            <Button
+              variant="secondary"
+              size="lg"
+              className="px-8 w-full md:w-auto max-w-md whitespace-nowrap bg-white/90! border border-transparent hover:border-zinc-300"
+            >
+              Learn More
+            </Button>
+          </Link>
+        </div>
       </div>
     </section>
   );
