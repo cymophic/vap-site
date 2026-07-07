@@ -1,8 +1,23 @@
+"use client";
+
 import Link from "next/link";
 import Button from "@/components/ui/Button";
 import { stats } from "@/lib/site";
+import { useCountScramble } from "@/lib/hooks/useCountScramble";
 
 export default function TrackRecord() {
+  const ANIMATION_DURATION = 800;
+  const { count: completedProjects, ref: completedProjectsRef } =
+    useCountScramble(stats.completedProjects, ANIMATION_DURATION);
+  const { count: yearStarted, ref: yearStartedRef } = useCountScramble(
+    stats.yearStarted,
+    ANIMATION_DURATION,
+  );
+  const { count: totalClients, ref: totalClientsRef } = useCountScramble(
+    stats.totalClients,
+    ANIMATION_DURATION,
+  );
+
   return (
     <section className="flex flex-col md:flex-row md:items-center gap-12">
       {/* Left */}
@@ -31,7 +46,9 @@ export default function TrackRecord() {
         <div className="bg-white rounded-2xl border border-zinc-200 p-5 md:p-8 flex flex-col gap-4 shadow-sm">
           <div className="flex flex-col gap-1">
             <span className="text-4xl md:text-5xl font-bold text-zinc-700">
-              {stats.completedProjects.toLocaleString()}+
+              <span ref={completedProjectsRef}>
+                {completedProjects.toLocaleString()}+
+              </span>
             </span>
             <span className="text-xs font-semibold uppercase tracking-widest text-zinc-400">
               Total Completed Projects
@@ -46,7 +63,7 @@ export default function TrackRecord() {
         <div className="flex gap-4">
           <div className="flex-1 bg-white rounded-2xl border border-zinc-200 p-5 md:p-8 flex flex-col gap-2 shadow-sm">
             <span className="text-4xl md:text-5xl font-bold text-zinc-700">
-              {stats.yearStarted}
+              <span ref={yearStartedRef}>{yearStarted}</span>
             </span>
             <span className="text-xs font-semibold uppercase tracking-widest text-zinc-400">
               Year Started
@@ -54,7 +71,7 @@ export default function TrackRecord() {
           </div>
           <div className="flex-1 bg-white rounded-2xl border border-zinc-200 p-5 md:p-8 flex flex-col gap-2 shadow-sm">
             <span className="text-4xl md:text-5xl font-bold text-zinc-700">
-              {stats.totalClients}+
+              <span ref={totalClientsRef}>{totalClients}+</span>
             </span>
             <span className="text-xs font-semibold uppercase tracking-widest text-zinc-400">
               Dedicated Clients Served
