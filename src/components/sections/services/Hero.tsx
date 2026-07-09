@@ -11,13 +11,11 @@ export default function Hero() {
         <p className="text-xs font-semibold uppercase tracking-widest text-brand-accent">
           Our Services
         </p>
-        <h1 className="-mt-4 text-5xl md:text-6xl font-bold tracking-tight text-zinc-900 leading-tight">
-          Assistance for Every Service.
+        <h1 className="-mt-4 text-4xl sm:text-5xl md:text-6xl font-bold tracking-tight text-zinc-900 leading-tight">
+          All-in-One Executive Virtual Assistant for Business Growth
         </h1>
         <p className="text-zinc-500 text-lg md:text-xl leading-relaxed max-w-2xl">
-          We provide virtual support across administrative, creative, and
-          digital services — giving your business the help it needs, handled by
-          an experienced and dedicated team.
+          With 18+ Years of Executive Virtual Assistance Experience, we help CEOs, entrepreneurs, and businesses streamline operations, strengthen their online presence, and leverage AI-powered content to grow faster.
         </p>
         <div className="flex flex-col md:flex-row gap-4 items-center md:items-start">
           <CalButton
