@@ -22,7 +22,7 @@ const services: Service[] = [
       "Meeting preparation & follow-ups",
       "Data entry & database management",
     ],
-    image: "/assets/services/executive-assistance.png",
+    image: "/assets/services/executive-assistance.jpg",
   },
   {
     title: "Email & Calendar Management",
