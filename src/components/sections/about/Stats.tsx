@@ -10,7 +10,7 @@ import { stats } from "@/lib/site";
 import { useCountScramble } from "@/lib/hooks/useCountScramble";
 
 export default function Stats() {
-  const ANIMATION_DURATION = 270;
+  const ANIMATION_DURATION = 670;
   const { count: completedProjects, ref: completedProjectsRef } =
     useCountScramble(stats.completedProjects, ANIMATION_DURATION);
   const { count: yearsOfExperience, ref: yearsOfExperienceRef } =
