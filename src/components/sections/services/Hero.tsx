@@ -41,7 +41,7 @@ export default function Hero() {
       <div className="hidden md:flex flex-1 justify-center">
         <div className="relative shadow-2xl w-full max-w-sm aspect-3/4 rounded-3xl overflow-hidden bg-zinc-100">
           <Image
-            src="/assets/services/hero.png"
+            src="/assets/services/hero.jpg"
             alt="Virtual assistant at work"
             fill
             className="object-cover"

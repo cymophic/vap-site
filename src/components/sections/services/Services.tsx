@@ -14,7 +14,7 @@ type Service = {
 const services: Service[] = [
   {
     title: "Executive Assistance",
-    outcome: "Stop spending time on administrative work. We manage your daily operations so you can focus on growing your business",
+    outcome: "We manage your daily operations so you can focus on growing your business",
     bullets: [
       "Executive Assistance",
       "Calendar & Appointment Management",
@@ -26,7 +26,7 @@ const services: Service[] = [
       "Travel Arrangements",
       "Project Coordination",
     ],
-    image: "/assets/services/executive-assistance.jpg",
+    image: "/assets/services/executive-assistance.png",
   },
   {
     title: "Social Media Management",
@@ -158,7 +158,7 @@ export default function Services() {
 
             {/* Content */}
             <div className="p-6 flex flex-col">
-              <div className="flex flex-col gap-1 pb-8">
+              <div className="flex flex-col gap-1">
                 <h3 className="text-lg font-semibold text-zinc-900">
                   {service.title}
                 </h3>
@@ -168,7 +168,7 @@ export default function Services() {
               </div>
 
               {/* Divider */}
-              <div className="w-full h-px bg-zinc-100" />
+              <div className="w-full h-px bg-zinc-100 mt-8" />
 
               {/* Accordion Toggle */}
               <button
