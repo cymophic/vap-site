@@ -21,7 +21,7 @@ export default function Footer() {
             />
             <div className="flex flex-col text-center md:text-start">
               <span className="text-lg font-bold text-white">
-                Virtual Assistant Provider
+                Jenny Ann Valenciano
               </span>
               <span className="text-sm font-normal text-white">
                 Metro Manila, Philippines
