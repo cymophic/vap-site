@@ -23,11 +23,10 @@ export default function TrackRecord() {
       {/* Left */}
       <div className="flex flex-col gap-6 flex-1">
         <h2 className="-mt-2 text-3xl md:text-4xl font-bold text-zinc-800 tracking-tight leading-tight">
-          Delivering results for decades. <br /> Built from clients like you.
+          Your Personal Business Assistant
         </h2>
         <p className="text-zinc-500 text-lg leading-relaxed max-w-lg">
-          Real experience. Real results. Continuously trusted by business owners
-          worldwide to handle the work that keeps operations running smoothly.
+          With 18+ years of experience, Jenny helps business owners stay organized, boost productivity, and strengthen their online presence by managing the essential day-to-day operations, so they can focus on growing their business.
         </p>
         <Link href="/contact/" className="w-full md:w-fit">
           <Button

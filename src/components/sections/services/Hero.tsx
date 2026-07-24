@@ -11,7 +11,7 @@ export default function Hero() {
         <p className="text-xs font-semibold uppercase tracking-widest text-brand-accent">
           Our Services
         </p>
-        <h1 className="-mt-4 text-4xl sm:text-5xl md:text-6xl font-bold tracking-tight text-zinc-900 leading-tight">
+        <h1 className="-mt-4 text-4xl md:text-5xl font-bold tracking-tight text-zinc-900 leading-tight">
           All-in-One Executive Virtual Assistant for Business Growth
         </h1>
         <p className="text-zinc-500 text-lg md:text-xl leading-relaxed max-w-2xl">
