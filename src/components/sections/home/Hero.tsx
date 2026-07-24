@@ -14,7 +14,7 @@ const features: string[] = [
 
 export default function Hero() {
   return (
-    <section className="flex flex-col md:flex-row md:items-center md:gap-12">
+    <section className="flex flex-col md:flex-row md:items-center md:gap-12 mt-12">
       {/* Left */}
       <div className="flex flex-col mx-auto gap-6 flex-1">
         {/* Eyebrow */}
@@ -23,17 +23,13 @@ export default function Hero() {
         </p>
 
         {/* Heading */}
-        <h1 className="-mt-4 text-5xl md:text-6xl font-bold text-center md:text-left leading-tight tracking-tight text-zinc-900">
-          You focus <span className="whitespace-nowrap">on Growth.</span> <br />{" "}
-          We Handle{" "}
-          <span className="text-brand-accent whitespace-nowrap">the Rest.</span>
+        <h1 className="-mb-2 text-6xl md:text-7xl font-great-vibes font-bold text-center md:text-left leading-tight tracking-tight text-zinc-900">
+          <span className="text-brand-accent ">Jenny</span> Ann Valenciano
         </h1>
 
         {/* Subheading */}
-        <p className="text-zinc-500 text-center md:text-left max-w-md text-lg md:text-xl leading-relaxed">
-          {stats.yearsOfExperience}+ years of trusted virtual support designed
-          with quality, consistency, and results so you can focus on what
-          matters most.
+        <p className="text-zinc-500 text-center md:text-left max-w-md text-md md:text-lg leading-relaxed">
+          {stats.yearsOfExperience}+ years of trusted virtual support designed with quality, consistency, and results so you can focus on what matters most.
         </p>
 
         {/* Checklist */}

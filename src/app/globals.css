@@ -6,6 +6,7 @@
 @theme {
   --font-sans: var(--font-dm-sans);
   --font-mono: var(--font-geist-mono), var(--font-spline-sans-mono);
+  --font-great-vibes: var(--font-great-vibes);
   --color-brand-accent: #e8184d;
   --header-height: 5rem;
 }

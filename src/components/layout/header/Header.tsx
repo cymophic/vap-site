@@ -84,7 +84,7 @@ type ActionButton = {
   text?: string;
   className?: string;
 };
-function ActionButton({ text = "Let's Talk", className }: ActionButton) {
+function ActionButton({ text = "Book a Free Discovery Call", className }: ActionButton) {
   return (
     <CalButton variant="primary" size="lg" className={className}>
       <span className="whitespace-nowrap">{text}</span>

@@ -2,7 +2,7 @@ import "./globals.css";
 
 import Script from "next/script";
 import type { Metadata } from "next";
-import { DM_Sans, Geist_Mono } from "next/font/google";
+import { DM_Sans, Geist_Mono, Great_Vibes } from "next/font/google";
 
 import ComingSoon from "@/app/coming-soon";
 import Header from "@/components/layout/header/Header";
@@ -13,6 +13,7 @@ const geistMono = Geist_Mono({
   variable: "--font-geist-mono",
   subsets: ["latin"],
 });
+const greatVibes = Great_Vibes({ variable: "--font-great-vibes", weight: "400", subsets: ["latin"] });
 
 export const metadata: Metadata = {
   title: "Virtual Assistant Provider PH",
@@ -25,7 +26,7 @@ export default function RootLayout({
   return (
     <html
       lang="en"
-      className={`${dmSans.variable} ${geistMono.variable} h-full antialiased font-sans`}
+      className={`${dmSans.variable} ${geistMono.variable} ${greatVibes.variable} h-full antialiased font-sans`}
       suppressHydrationWarning
     >
       <body

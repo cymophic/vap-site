@@ -9,21 +9,21 @@ type Step = {
 const steps: Step[] = [
   {
     icon: IconSend,
-    title: "Send in Your Tasks",
+    title: "Schedule a Discovery Call",
     description:
-      "Send your tasks via email, chat, or phone after you sign up — however works best for you.",
+      "Discuss your business goals, challenges, and support needs with Jenny to determine the best way she can support your business.",
   },
   {
     icon: IconUserCheck,
-    title: "Your Assistant Picks It Up",
+    title: "Send Your Tasks & Connect",
     description:
-      "Your VA performs the task and keeps you updated throughout. Track progress anytime.",
+      "Simply send your tasks. Jenny stays connected through Google Chat, Zoom, WhatsApp, email, or your preferred communication platform.",
   },
   {
     icon: IconCircleCheck,
-    title: "Task Completed",
+    title: "Tasks Completed",
     description:
-      "Your VA completes the task or coordinates with the right people to deliver it back on time.",
+      "Focus on growing your business while Jenny handles the day-to-day operations, delivering high-quality work on time and keeping everything running smoothly.",
   },
 ];
 
